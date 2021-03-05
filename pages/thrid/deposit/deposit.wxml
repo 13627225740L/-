@@ -1,0 +1,34 @@
+<!--pages/thrid/deposit/deposit.wxml-->
+
+<view class='card-bar' bindtap='toMy_card'>
+  <view class='card'>
+    <view class='card-left'>
+      <text class='cardName omit'>{{ bank }}</text>
+      <text class='cardNumber omit'>{{ card }}</text>
+    </view>
+    <view class='card-right'>
+      <text class='look'>查看</text>
+      <image class='icon' src='img/01.png' />
+    </view>
+  </view>
+</view>
+
+<!-- 提现框 -->
+<view class='item-view'>
+  <text class='title'>提现金额</text>
+  <view class='price bottom-line'>
+    <text class='price-hint'>￥</text>
+    <input class='price-input' placeholder='100' placeholder-class='active' bindinput='getPrice' />
+    <image class='img' src='img/02.png' />
+  </view>
+  <view class='balance'>
+    <text style='font-size: 30rpx;'>可提现金额</text>
+    <text style='font-size: 30rpx; color: #ff5733; padding-left: 10rpx;'>{{ balance }}元</text>
+  </view>
+  <text class='hint-text grey-4 md-font'>提示：最低提现金额为100元，提现1~2个工作日到账！</text>
+</view>
+
+<!-- 提现按钮 -->
+<view class='but-view'>
+  <view class='submit' bindtap='onSubmit'>确认提现</view>
+</view>

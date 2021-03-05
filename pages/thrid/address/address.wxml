@@ -1,0 +1,52 @@
+<!--pages/thrid/address/address.wxml-->
+<block wx:for="{{addressList}}" wx:key="{{index}}">
+    <view class="site-bar">
+        <view class="site-item">
+            <view class="user bottom-line" data-id="{{item.id}}" bind:tap="fhdd">
+                <view class="name-phone  bottom-line">
+                    <view class='hint weight'>收货人：</view>
+                    <view class="name omit ">{{item.names}}</view>
+                    <view class="phone">{{item.phone}}</view>
+                </view>
+                <view class="site">
+                  <view class='hint weight'>收货地址：</view>
+                    <text class="site-text two-omit">{{item.address}}</text>
+                </view>
+            </view>
+            <view class="set" wx:if="{{id == 0}}">
+                <view class="left">
+                    <radio-group bindchange="checkboxChange" data-id="{{item.id}}">
+                        <label class="checkbox">
+                            <radio value="1" color='#ff5733' wx:if="{{item.stctic==0}}">设为默认</radio>
+                            <radio value="1" color='#ff5733' wx:if="{{item.stctic==1}}" checked='checked'>
+                                默认
+                            </radio>
+                        </label>
+                    </radio-group>
+                </view>
+                <view class="right">
+                    <view style="margin-right: 30rpx;" 
+                      class="compile" 
+                      data-id="{{item.id}}" 
+                      data-name="{{item.names}}" 
+                      data-phone="{{item.phone}}"
+                      data-info="{{item.info}}" 
+                      bind:tap="toModify">
+                        <image class='icon' src='img/01.png' />编辑
+                      </view>
+                    <view class="compile" data-id="{{item.id}}" bind:tap="toDel">
+                      <image class='icon' src='img/02.png'/>删除
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<!-- 新增地址 -->
+<view class="bot" wx:if="{{id == 0}}">
+    <view class="add" bindtap="toAdd">
+        <image class="add-pic" src="img/03.png"/>
+        <text class="add-text">添加收货地址</text>
+    </view>
+</view>

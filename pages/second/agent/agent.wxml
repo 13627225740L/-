@@ -1,0 +1,39 @@
+<!--pages/second/agent/agent.wxml-->
+<!-- 区域加盟代理 -->
+<image class='top' src="{{image}}" />
+
+<view class='apply '>
+  <text>填写申请</text>
+</view>
+<!-- 信息填写 -->
+<view class='message hr'>
+  <view class="name bottom-liner">
+    <text style='color:red;'>*</text>
+    <text class='names'>姓名：</text>
+    <input class="inputs" bindinput='getName' placeholder='请输入姓名' placeholder-style='font-size:26rpx;color:#ccc;' />
+  </view>
+  <view class="idcard bottom-liner">
+    <text style='color:red;'>*</text>
+    <text class='idcards'>身份证：</text>
+    <input class="inputs" bindinput='getIDcard' placeholder='请输入身份证号码' maxlength='18' placeholder-style='font-size:26rpx;color:#ccc;' />
+  </view>
+  <view class="phone bottom-liner">
+    <text style='color:red;'>*</text>
+    <text class='phones'>电话号码：</text>
+    <input class="inputs" bindinput='getMobile' placeholder='请输入联系电话' maxlength='12' placeholder-style='font-size:26rpx;color:#ccc;' />
+  </view>
+  <view class="phone bottom-liner">
+    <text style='color:red;'>*</text>
+    <text class='phones'>选择区域：</text>
+    <picker style='width: 480rpx;' mode="selector" range='{{ siteList }}' range-key='title' value='{{ index }}' bindchange='siteChange'>{{ siteList[index].title }}</picker>
+    <image style="width:40rpx;height:40rpx;" src="img/01.png" />
+  </view>
+
+  <text class='resaon'>申请理由:</text>
+  <textarea class='applys' bindinput='getReason' placeholder='请输入内容' placeholder-style='font-size:26rpx;padding：10rpx; color:#ccc;'>
+  </textarea>
+</view>
+<!-- 提交申请 -->
+<view class='submit' bindtap='onSubmit'>提交</view>
+<view class='prompt'>提交申请后，工作人员将在72h内给您回复！</view>
+<!-- <view style="height:200rpx;width:100%;"> </view> -->

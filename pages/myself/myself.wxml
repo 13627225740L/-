@@ -1,0 +1,118 @@
+<!--pages/myself/myself.wxml-->
+<view class='user ' style="margin-top:20rpx;">
+  <view class="left-user">
+    <view class="title">
+      <view class="name omit">{{user.username}}</view> 
+      <view class="money" bindtap='toInvest' wx:if="{{ switch_on == 1 }}">
+        <text>充值活动</text>
+      </view> 
+    </view>
+    <view class='leagure' wx:if="{{ user.type == 1 }}">
+      <text id="leagu">实名会员</text>
+      <text class="leagur omit">ID:{{user.id}}</text>
+    </view>
+    <view class='leagure' wx:if="{{ user.type == 0 }}">
+      <text>尚未认证</text>
+    </view>
+    <view bindtap='btn' class='Money'>邀请赚钱</view>
+  </view>
+  <view class="right-user" >
+    <image  src="{{ user.usertv }}" />
+  </view>
+</view>
+<view class='he'></view>
+<view class='brokerage'style="" >
+    <view class='commision' bindtap='toVousher' >
+      <text class='commision-number'>{{ user.yu }}</text>
+      <text class='commisions'>生活费</text>
+    </view>
+    <view class='subsidy' bindtap='tomy_performance' >
+      <text class='subsidy-number'>{{ user.subsidy }}</text>
+      <text class='subsidys'>送餐补助</text>
+    </view>
+    <view class='invite' bindtap='toCommision'>
+      <text class='invite-number'>{{ user.yong }}</text>
+      <text class='invites'>邀请佣金</text>
+    </view>
+</view>
+<view class='hes'></view>
+<view class='attestation' wx:if="{{ user.type == 0 }}">
+  <view class='attestations' bindtap='toatterstion'>
+    <text class='attestations-one'>顺风送餐认证></text>
+    <text class='attestations-two'>免费入驻、福利多多，还能撩妹哦~~</text>
+  </view>
+  <view class='attestationimg'>
+    <image src="{{ image }}"/>
+  </view>
+</view>
+<view class='hes'></view>
+
+<view class='con'>我的订单</view>
+<view class='cont'>
+  <view class="conts" data-tabId='1' bindtap='toAssess' >
+    <image src="img/05.png"/>
+    <text>待付款</text>
+    <view class='badge' wx:if="{{ orderNum1 != 0 }}">{{ orderNum1 }}</view>
+  </view>
+  <view class="conts" data-tabId='2' bindtap='toAssess'>
+    <image src="img/06.png"/>
+    <text>待接单</text>
+    <view class='badge' wx:if="{{ orderNum2 != 0 }}">{{ orderNum2 }}</view>
+  </view>
+  <view class="conts" data-tabId='3' bindtap='toAssess'>
+    <image src="img/02.png"/>
+    <text>待收货</text>
+    <view class='badge' wx:if="{{ orderNum3 != 0 }}">{{ orderNum3 }}</view>  
+  </view>
+  <view class="conts" data-tabId='4' bindtap='toAssess'>
+    <image src="img/02.png"/>
+    <text>待评价</text>
+    <view class='badge' wx:if="{{ orderNum4 != 0 }}">{{ orderNum4 }}</view>
+  </view>
+</view>
+<view class='hes'></view>
+<view class='help' bindtap='toDistribution'>
+  <text>我的配送单</text>
+  <view class='order-badge' wx:if="{{ orderNum != 0 }}">{{ orderNum }}</view>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view class='help' bindtap='toMycard'>
+  <text>我的银行卡</text>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view class='help' bindtap='toAddress'>
+  <text>收货地址</text>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view class='help' bindtap='tohelp'>
+  <text>使用帮助</text>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view class='league' bindtap='toagent' >
+  <text>区域加盟代理</text>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view class='help' bindtap='toAbout'>
+  <text>关于我们</text>
+  <image src="img/01-icon.png"/>
+</view>
+<view class='he'></view>
+<view style='height: 500rpx;'></view>
+
+<!-- 弹出推广二维码 -->
+<!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <!-- 二维码或其他图片 -->
+  <view class='del-view'>
+    <image class='del' src='img/close.svg' bindtap='ok'/>
+  </view>
+  <image class='pic' style='height: {{ windowHeight }}px; width: {{ windowWidth }}px' src='{{code}}' data-url='{{code}}' bindtap='previewImage' />
+  <view class='save' data-url='{{code}}' bindtap='picSave'>保存相册并分享</view>
+</view>

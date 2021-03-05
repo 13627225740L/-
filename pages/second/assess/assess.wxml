@@ -1,0 +1,52 @@
+<!--pages/second/assess/assess.wxml-->
+<!-- 顶部 -->
+<view class="tab-bar shadow">
+  <view class="tab">
+    <block wx:for="{{tabList}}" wx:key="index">
+      <view class="tab-item {{currentIndex == index ? 'active' : ''}}" data-index="{{index}}" bind:tap="onChange" data-id="{{item.id}}">{{item.name}}
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 订单列表 -->
+<view class="order">
+  <block wx:for="{{orderList}}" wx:for-index="index" wx:key="{{index}}">
+    <view class="order-item shadow">
+      <view class="odear-up">
+        <view class="num">订单编号：{{item.d_id}}</view>
+      </view>
+      <block wx:for="{{item.list}}" wx:key="{{index}}" wx:for-item="list">
+        <view class="order-center" data-id="{{list.s_id}}" bind:tap="toDetails">
+          <image class="goods-pic" src="{{list.image}}" />
+          <view class="order-center-right">
+            <view class="right-up">
+              <view class="goods-name two-omit">{{list.title}}</view>
+              <view class="goods-price omit" wx:if="{{ !list.goods_option }}">￥{{list.price}}</view>
+              <view class="goods-price omit" wx:if="{{ list.goods_option }}">￥{{list.goods_option.price}}</view>
+            </view>
+            <view class="right-bot">
+              <view class="size grey-4 md-font omit" wx:if="{{ !list.goods_option }}">规格：默认规格</view>
+              <view class="size grey-4 md-font omit" wx:if="{{ list.goods_option }}">规格：{{list.goods_option.option_name}}</view>
+              <view class="goods-number md-font omit">X{{list.sum}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='pj' wx:if="{{list.stctic == 3 && item.list.length > 1}}">
+          <view class='warning' data-s_id='{{list.s_id}}' data-id='{{list.id}}' bindtap='goComment'>评价</view>
+        </view>
+      </block>
+      <view class="item-footer">
+        <view wx:if="{{item.stctic < 5}}" class="total md-font">打赏金额：￥{{ item.d_price }}元</view>
+        <view wx:if="{{item.stctic < 5}}" class="total md-font">共计{{item.sume}}件商品 合计：¥ {{item.price}}</view>
+        <view class="bar">
+          <view class="warning" style="color: #808080 !important; border: 2rpx solid #808080 !important;" wx:if="{{item.stctic == 0}}" data-id="{{item.id}}" bind:tap="quxdd">取消订单</view>
+          <view class="warning" wx:if="{{item.stctic == 0}}" data-orderNum="{{item.id}}" data-orderPrice="{{item.price}}" bind:tap="goPay">付款</view>
+          <view class="warning" wx:if="{{item.stctic == 1}}" data-id="{{item.id}}" bind:tap="remind">提醒接单</view>
+          <view class="warning" wx:if="{{item.stctic == 2}}" data-id="{{item.id}}" bind:tap="recive">确认收货</view>
+          <view class='warning' wx:if="{{item.stctic == 3 && item.list.length == 1}}" data-id='{{item.list[0].id}}' data-s_id='{{item.list[0].s_id}}' bindtap='goComment'>评价</view>
+          <view class='warning' wx:if="{{item.stctic == 4}}">已完成</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

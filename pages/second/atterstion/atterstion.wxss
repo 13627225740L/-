@@ -1,0 +1,162 @@
+/* pages/second/atterstion/atterstion.wxss */
+/* pages/second/attestation/attestation.wxss */
+@import "../../../utils/wxParse/wxParse.wxss";
+
+page {
+  width: 750rpx;
+  background-color: #f5f5f5;
+  font-size: 28rpx;
+}
+
+/* 顶部海报 */
+
+.poster-img {
+  /* height: 180rpx; */
+  width: 700rpx;
+  border-radius: 30rpx;
+  margin: 20rpx 25rpx;
+}
+
+.mose-text{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+}
+
+/* 输入栏 */
+
+.item {
+  width: 690rpx;
+  height: 80rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+}
+
+.item text {
+  color: #ff5733;
+  padding-right: 10rpx;
+  width: 20rpx;
+  padding-top: 12rpx;
+}
+
+.item .title {
+  font-size: 32rpx;
+  width: 120rpx;
+}
+
+.item .input {
+  width: 530rpx;
+  padding-left: 10rpx;
+}
+
+/* 上传身份证 */
+
+.add-id-image {
+  background-color: #fff;
+  width: 690rpx;
+  padding: 0 30rpx 20rpx 30rpx;
+}
+
+.add-image {
+  justify-content: space-between;
+  padding: 10rpx 0 20rpx 0;
+}
+
+.add {
+  width: 320rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 10rpx;
+  border: 2rpx dotted #ccc;
+}
+
+.id-image {
+  width: 320rpx;
+  height: 200rpx;
+  margin: 0 10rpx;
+}
+
+.add .icon {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.add text {
+  padding-top: 4rpx;
+}
+
+.del1-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 20rpx;
+  left: 310rpx;
+}
+
+/* 协议书 */
+
+.protocol {
+  background-color: #fff;
+  height: 80rpx;
+  width: 690rpx;
+  padding: 0 30rpx;
+  margin: 10rpx 0;
+}
+
+.select-ico {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.protocol-text{
+  color: #55a2f8;
+}
+
+/* 弹出层 */
+
+.dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.dialog_container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+
+.dialog_show .dialog_container {
+  transform: translateY(0);
+}
+
+.dialog_show .dialog_mask {
+  display: block;
+}
+
+
+/* 下一步 */
+.next{
+  width: 670rpx;
+  height: 80rpx;
+  background-color: #ff5733;
+  color: #fff;
+  border-radius: 30rpx;
+  margin: 30rpx 40rpx;
+}

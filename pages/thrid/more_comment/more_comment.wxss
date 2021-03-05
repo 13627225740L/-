@@ -1,0 +1,88 @@
+/* 商品评价 */
+
+.hint {
+  width: 690rpx;
+  height: 90rpx;
+  padding: 0 30rpx;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 690rpx;
+  padding: 20rpx 30rpx;
+  height: auto;
+  background-color: #fff;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.userAv {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.userName {
+  width: 160rpx;
+  font-size: 26rpx;
+}
+
+.reviewsTime {
+  font-size: 24rpx;
+  color: #ccc;
+  width: 300rpx;
+  text-align: right;
+}
+
+.info {
+  width: 620rpx;
+  height: auto;
+  padding: 20rpx 30rpx 10rpx 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.imag {
+  display: inline-flex;
+  align-items: center;
+  width: 210rpx;
+  height: 160rpx;
+  margin: 10rpx;
+}
+
+.comment-icon {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+}
+
+/* 评论界面 */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  /* padding: 0 30rpx; */
+  height: auto;
+  background-color: #fff;
+  margin-top: 80rpx;
+}
+
+.item .up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 690rpx;
+  padding: 0 30rpx;
+  height: 80rpx;
+}

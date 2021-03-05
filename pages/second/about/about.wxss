@@ -1,0 +1,26 @@
+
+page{
+  font-size: 30rpx;
+}
+
+.name {
+  font-weight: 700;
+  margin: 40rpx 0 60rpx 0;
+  text-align: center;
+}
+
+.desc {
+  display: flex;
+  margin: 30rpx 36rpx;
+}
+
+.address {
+  display: flex;
+  font-size: 28rpx;
+  margin: 40rpx 36rpx;
+}
+
+.phone {
+  display: flex;
+  margin: 20rpx 36rpx;
+}

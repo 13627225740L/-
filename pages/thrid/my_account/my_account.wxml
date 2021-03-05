@@ -1,0 +1,29 @@
+<!-- 顶部 -->
+<view class='up'>
+  <text>你的账户余额（元）</text>
+  <view style='font-size: 60rpx;'>{{ balance }}</view>
+  <text>元</text>
+</view>
+
+<!-- 充值按钮 -->
+<view class='button-view all-center'>
+  <view class='butt all-center' bindtap='toRecharge'>充值</view>
+  <view class='butt all-center' bindtap='toDeposit'>提现</view>
+</view>
+
+<!-- 余额记录 -->
+<view class='item-list'>
+  <text class='hint'>账户记录</text>
+  <block wx:for="{{ itemList }}" wx:key="">
+    <view class='item bottom-line '>
+      <view class='item-name omit' wx:if="{{ item.type == 1 }}">微信充值</view>
+      <view class='item-name omit' wx:if="{{ item.type == 2 }}">提现</view>
+      <view class='item-name omit' wx:if="{{ item.type == 3 }}">微信支付</view>
+      <view class='item-name omit' wx:if="{{ item.type == 4 }}">余额支付</view>
+      <view class='item-name omit' wx:if="{{ item.type == 5 }}">佣金转入</view>
+      <view class='item-name omit' wx:if="{{ item.type == 6 }}">后台充值</view>
+      <view class='item-time'>{{ item.create_time }}</view>
+      <view class='item-price' style="color: {{ item.type == 1  || item.type == 5  || item.type == 6  ? '#469af8':'#ff5733' }}">{{  item.type == 1  || item.type == 5  || item.type == 6  ? '+':'-' }}{{ item.price }}元</view>
+    </view>
+  </block>
+</view>

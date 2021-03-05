@@ -1,0 +1,126 @@
+<!--pages/second/atterstion/atterstion.wxml-->
+
+<block  wx:if="{{mose == 0}}">
+  <view class="mose-text" >审核中...</view>
+</block>
+
+
+<block  wx:if="{{mose == 1}}">
+  <view class="mose-text" >审核通过...</view>
+</block>
+
+<view wx:if="{{ mose == null }}">
+  <import src="../../../utils/wxParse/wxParse.wxml" />
+
+  <!-- 顶部海报 -->
+  <image class='poster-img' mode='widthFix' src='{{image}}' />
+
+  <!-- 填写资料栏 -->
+  <view class='item row-center bottom-line'>
+    <text>*</text>
+    <view class='title'>姓名：</view>
+    <input class='input' placeholder='请输入名字' placeholder-style='color: #a6a6a6;' bindinput='getName' />
+  </view>
+
+  <view class='item row-center bottom-line'>
+    <text>*</text>
+    <view class='title'>性别：</view>
+      <radio-group class="radio-item" bindchange="getClassify">
+        <label class='radio'>
+          <radio value='男' checked='1' color='#2A82E4' >
+            <text style="color: black !important;">男</text>
+          </radio>
+          <radio value='女'  color='#2A82E4' style="margin-left: 40rpx;">
+            <text style="color: black !important;">女</text>
+          </radio>
+        </label>
+      </radio-group>
+  </view>
+
+  <view class='item row-center bottom-line'>
+    <text>*</text>
+    <view class='title' style='width: 170rpx !important;'>手机号码：</view>
+    <input class='input' style='width: 480rpx !important;' placeholder='输入手机号码' placeholder-style='color: #a6a6a6;' bindinput='getMobile' />
+  </view>
+
+
+  <view class='item row-center bottom-line'>
+    <text>*</text>
+    <view class='title' style='width: 170rpx !important;'>身份证号：</view>
+    <input class='input' style='width: 480rpx !important;' placeholder='输入身份证号码' placeholder-style='color: #a6a6a6;' bindinput='getIdCard' />
+  </view>
+
+  <!-- 上传身份证照片 -->
+
+  <view class='add-id-image column-center'>
+    <view class='item row-center'>
+      <text>*</text>
+      <view class='title' style='width: auto !important;'>身份证照片：</view>
+    </view>
+
+    <view class='add-image row-center'>
+      <!-- 正面 -->
+      <view wx:if="{{ image1 == '' }}" class='add' bindtap='gotoShow1'>
+        <image class='icon' src='img/01.svg' />
+        <text>正面照片</text>
+        <text class='grey-4 md-font'>(文字清晰，四交齐全)</text>
+      </view>
+      <view wx:if="{{ image1 != '' }}">
+        <image class='del1-icon' src='img/del_ico.png' catchtap='delImage1'/>
+        <image class='id-image' src='{{ image1 }}' data-src='{{ image1 }}' mode='aspectFit'  bindtap='previewImage1' ></image>
+      </view>
+      <!-- 反面 -->
+      <view wx:if="{{ image2 == '' }}" class='add' bindtap='gotoShow2'>
+        <image class='icon' src='img/01.svg' />
+        <text>反面照片</text>
+        <text class='grey-4 md-font'>(文字清晰，四交齐全)</text>
+      </view>
+      <view wx:if="{{ image2 != '' }}">
+        <image class='del1-icon' src='img/del_ico.png' catchtap='delImage2' />
+        <image class='id-image' src='{{ image2 }}' data-src='{{ image2 }}' mode='aspectFit'  bindtap='previewImage2' ></image>
+      </view>
+    </view>
+    <!-- 提示 -->
+    <view class='row-center'>
+      <image class='icon' style='padding-right: 20rpx;' src='img/hint_ico.svg' />
+      <text class='grey-4 md-font'>格式为JPG,PNG,GIF,大小不超过2M</text>
+    </view>
+  </view>
+
+  <!-- 协议 -->
+  <view class='protocol row-center'>
+    <view class='price row-center'>
+      <image wx:if="{{status == 0}}"  bind:tap="checkedChange" class="select-ico" src="img/unselected.png" />
+      <image wx:if="{{status == 1}}"  bind:tap="checkedChange" class="select-ico" src="img/checked.png" />
+      <text class='grey-4'>请点击仔细阅读</text>
+      <text class='protocol-text' data-index="0" bindtap='getOwnerInfo'>《{{articleName}}》</text>
+    </view>
+  </view>
+
+  <!-- 下一步 -->
+
+  <view class='next all-center' bindtap='toAttestation'>提交</view>
+
+  <view class='all-center grey-5 md-font' style='width: 750rpx;'>提示：提交申请后，客服将在1个工作日完成资料审核</view>
+
+
+
+  <!-- 协议弹窗 -->
+  <view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+    <view class="dialog_mask" bindtap="onClickdiaView" />
+    <view class="dialog_container">
+
+      <!--  //此区域自定义视图  -->
+      <view class="flex_Center" style="height:{{ pageHeight * 0.68 }}rpx;background:white;">
+        <view style="height: 100%;color:#333;font-size:30rpx;">
+          <scroll-view scroll-with-animation="true"  style='height: 100%;' scroll-y='trun' >
+            <view style='padding: 10rpx;'>
+              <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

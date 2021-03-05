@@ -1,0 +1,84 @@
+<!--pages/logs/logs.wxml-->
+<!-- 滚动条 -->
+<view class="top">
+  <!-- 小喇叭的图标 -->
+  <image class="icon" src="img/01.png"></image>
+  <!--公告栏使用文字跑马灯   -->
+  <swiper class="notice" vertical="true" autoplay="true" circular="true" interval="6000">
+    <block wx:for="{{noticeList}}" wx:key="">
+      <swiper-item>
+        <view class="notice-item" data-id="{{item.id}}" bind:tap="toDynamic">{{item.username}}刚刚下单了，{{item.list[0].title}}一份。请尽快接单哟~~~</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 气泡 -->
+<view class="con">
+  <view class="round">
+    <view class='picker' wx:if="{{ itemList != '' }}">
+      <view class='itemone ani-one' data-value='0' wx:if="{{ value != 0 }}" bindtap='tohidden'>
+        <image class='imgone imgshard' src="{{itemList[0].usertv}}" />
+        <view class='item-text'>对方打赏{{ itemList[0].d_price }}元</view>
+      </view>
+      <view class='itemtwo ani-two' data-value='1' wx:if="{{ value != 1 }}" bindtap='tohidden'>
+        <image class='imgtwo imgshard' src="{{itemList[1].usertv}}" />
+        <view class='item-texttwo'>对方打赏{{ itemList[1].d_price }}元</view>
+      </view>
+      <view class='itemthree ani-three' data-value='2' wx:if="{{ value != 2 }}" bindtap='tohidden'>
+        <image class='imgthree imgshard' src="{{itemList[2].usertv}}" />
+        <view class='item-textthree'>对方打赏{{ itemList[2].d_price }}元</view>
+      </view>
+      <view class='itemforee ani-fore' data-value='3' wx:if="{{ value != 3 }}" bindtap='tohidden'>
+        <image class='imgforee imgshard' src="{{itemList[3].usertv}}" />
+        <view class='item-textforee'>对方打赏{{ itemList[3].d_price }}元</view>
+      </view>
+    </view>
+    <view class='cn'>
+      <view class='textone'>送餐报酬</view>
+      <view class='texttwo' >{{centerList.d_price }}</view>
+      <view class='textthree' data-id='{{ centerList.id }}' bindtap='getOrder' >点击送餐</view>
+      <view class='textfor' wx:if="{{ gender == 0 }}" >未知</view>
+      <view class='textfor' wx:if="{{ gender == 1 }}" >对方是帅哥哟！</view>
+      <view class='textfor' wx:if="{{ gender == 2 }}" >对方是妹子哟！</view>
+    </view>
+    <view class='change' bindtap="toRenovate" >
+      <image class='change-icon' src='img/change_icon.png' /> 点击刷新订单
+    </view>
+  </view>
+  <view class='bott'>
+    <view class="btn">
+      <text>送餐地区仅限于花果园周边，每天订单不限制</text>
+    </view>
+    <!-- 文字滚动条 -->
+    <view class="elegant">
+      <text class='omit' wx:if="{{ itemList != '' }}">当前订单买家打赏“{{ centerList.d_price }}元”，送到“{{site}}”</text>
+    </view>
+  </view>
+</view>
+<!-- 订单列表 -->
+<view class="orderlist bottom-line">
+  <text>订单列表</text>
+</view>
+<view class="list" wx:for='{{orderList}}' wx:key=''>
+  <view class="imgs" data-id='{{ item.id }}' bindtap='toDetail'>
+    <image class="imag" src="{{item.usertv}} " />
+    <view class="self">
+      <view class="name omit">
+        {{item.username}}
+      </view>
+      <view class="seats ">
+        <image style="" src="img/02.svg" />
+        <text class=" omit " style="">{{item.info}}</text>
+      </view>
+    </view>
+    <view class="money">
+      <text class="moneyTA">TA打赏</text>
+      <text class="yuan">¥</text>
+      <text class="moneyyuan omit">{{item.d_price}}</text>
+      <text class="yuans">元</text>
+    </view>
+    <view class='myself'>
+      <view class="mys" hover-class='myse' data-id='{{ item.id }}' catchtap='getOrder'>我送</view>
+    </view>
+  </view>
+</view>

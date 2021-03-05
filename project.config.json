@@ -1,0 +1,212 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx3c6c7cefd59fcb68",
+	"projectname": "%E5%BC%82%E6%80%A7%E9%A1%BA%E9%A3%8E%E9%A4%90",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "爆款",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "送餐",
+					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/myself/myself",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "商品详情",
+					"pathName": "pages/detail/detail",
+					"query": "id=35",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "帮助中心",
+					"pathName": "pages/second/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定银行卡",
+					"pathName": "pages/thrid/binding-card/binding-card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "区域加盟代理",
+					"pathName": "pages/second/agent/agent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "认证中心",
+					"pathName": "pages/second/atterstion/atterstion",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/second/assess/assess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "账户中心",
+					"pathName": "pages/second/Vousher/Vousher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请提现",
+					"pathName": "pages/thrid/deposit/deposit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "确认订单",
+					"pathName": "pages/thrid/confirmOrder/confirmOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "地址管理中心",
+					"pathName": "pages/thrid/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加地址",
+					"pathName": "pages/thrid/add_address/add_address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/thrid/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "套餐选择",
+					"pathName": "pages/thrid/invest/invest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评论",
+					"pathName": "pages/thrid/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "我的银行卡",
+					"pathName": "pages/thrid/my_card/my_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "配送详情",
+					"pathName": "pages/thrid/Distributiondetails/Distributiondetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "代购详情",
+					"pathName": "pages/thrid/Purchasing-details/Purchasing-details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "23123",
+					"pathName": "pages/thrid/Purchasing-details/Purchasing-details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抢单详情-order_detail",
+					"pathName": "pages/thrid/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

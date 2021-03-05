@@ -1,0 +1,32 @@
+<!--pages/second/bing_card/bing_card.wxml-->
+<!-- 绑定银行卡 -->
+<view class='enroll-item'>
+  <view class='item-xing'>*</view>
+  <view class='item-title'>姓名</view>
+  <input class='item-content' type='text' placeholder='请输入姓名' bindinput='getName'></input>
+</view>
+<view class='enroll-item' style="margin-top: 2rpx;">
+  <view class='item-xing'>*</view>
+  <view class='item-title'>手机号</view>
+  <input class='item-content' type='number' placeholder='请输入手机号' bindinput='getPhone'></input>
+</view>
+<view class='enroll-item' style="margin-top: 2rpx;">
+  <view class='item-xing'>*</view>
+  <view class='item-title'>银行卡号</view>
+  <input class='item-content' type='number' placeholder='请输入银行卡号' bindinput='getCardNumber'></input>
+</view>
+<view class='enroll-item' style="margin-top: 2rpx;">
+  <view class='item-xing'>*</view>
+  <view class='item-title'>请再次输入银行卡号</view>
+  <input class='item-content' type='number' placeholder='请再次输入银行卡号' bindinput='getTwoCardNumber'></input>
+</view>
+<view class='enroll-item' style="margin-top: 2rpx;">
+  <view class='item-xing'>*</view>
+  <view class='item-title'>所属银行</view>
+  <input class='item-content' placeholder='请输入所属银行' bindinput='getCardBank'></input>
+</view>
+<view class='withdraw-note'>绑定须知</view>
+<view class='bank-reminder'>请在上方填写您真实的个人信息并与身份证信息一致，银行卡号与所属银行完全对应，信息出错或者不一致会导致您绑定失效，提现失败等情况。我们承诺您的资料只会在本平台用户提现付款时使用，不会对外使用，请放心填写。</view>
+<view class='sign-up' bindtap='submitInfos'>提交</view>
+
+

@@ -1,0 +1,80 @@
+/* pages/second/agent/agent.wxss */
+page{
+  width:750rpx;
+}
+/* 间隔线 */
+.bottom-liner{
+  border-bottom: 1rpx solid #E5E5E5;
+  padding-bottom: 8rpx;
+}
+.top{
+  width:100%;
+  height:350rpx;
+
+}
+.apply{
+  background-color: #fff;
+}
+.apply text{
+  font-size: 32rpx;
+  width:700rpx;
+  display:flex;
+  align-items: center;
+  margin: 0 auto;
+  line-height: 80rpx;
+}
+/* 个人信息输入 */
+.message{
+  background-color: #fff;
+  margin-top: 5rpx;
+}
+.name,.idcard,.phone{
+  width:700rpx;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+}
+.names,.idcards,.phones{
+  font-size: 28rpx;
+  padding-left:8rpx;
+  line-height: 80rpx;
+ }
+.inputs{
+  width:500rpx;
+}
+.resaon{
+  width:700rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.applys{
+  width: 620rpx;
+  height: 220rpx;
+  border: solid 1rpx #ccc;
+  margin: 0 auto;
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+}
+.submit{
+  width:400rpx;
+  background-color: red;
+  margin: 30rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+}
+.prompt{
+  width: 480rpx;
+  font-size: 24rpx;
+  margin: 32rpx auto;
+  color: #ccc;
+
+}

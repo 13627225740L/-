@@ -1,0 +1,23 @@
+<!-- 顶部 -->
+<view class='up'>
+  <text>你获得的送餐补助（元）</text>
+  <view style='font-size: 60rpx;'>{{ yjjf }}</view>
+  <text>元</text>
+</view>
+
+<!-- 充值按钮 -->
+<view class='button-view all-center'>
+  <view class='butt all-center' bindtap='shiftToBalance'>转入余额</view>
+</view>
+
+<!-- 佣金记录 -->
+<view class='item-list'>
+  <text class='hint'>补助记录</text>
+  <block wx:for="{{ itemList }}" wx:key="">
+    <view class='item bottom-line '>
+      <view class='item-name omit'>获得补助</view>
+      <view class='item-time'>{{ item.create_time }}</view>
+      <view class='item-price' style="color: #469af8;">+{{ item.sum }}元</view>
+    </view>
+  </block>
+</view>

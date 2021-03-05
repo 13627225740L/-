@@ -1,0 +1,22 @@
+<!-- 顶部 -->
+<view class='img-view'>
+  <image class='help-img' src='img/help.png' />
+</view>
+<!-- 标题 -->
+<view class='hint'>
+  <image class='icon' src='img/help.png'/>
+  <text>常见问题</text>
+</view>
+<!-- 问题列表 -->
+<block wx:for="{{ itemList }}" wx:key="{{  }}" >
+  <view class='list-item bottom-line' data-id='{{ index }}' bindtap='toDetils' >
+    <view class='up'>
+      <view class='item-title'>{{item.title}}</view>
+      <!-- 左箭头的图标 -->
+      <image wx:if="{{ index != id }}" class='icon' src='img/01.png' />
+      <!-- 向下的图标 -->
+      <image wx:else class='icon' src='img/02.png' />
+    </view>
+    <view wx:if="{{ index == id }}" class="item-info ">{{ item.info }}</view>
+  </view>
+</block>

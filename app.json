@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myself/myself",
+    "pages/detail/detail",
+    "pages/second/help/help",
+    "pages/second/agent/agent",
+    "pages/second/atterstion/atterstion",
+    "pages/second/assess/assess",
+    "pages/second/Vousher/Vousher",
+    "pages/thrid/location/location",
+    "pages/thrid/deposit/deposit",
+    "pages/thrid/confirmOrder/confirmOrder",
+    "pages/thrid/address/address",
+    "pages/thrid/add_address/add_address",
+    "pages/thrid/apply/apply",
+    "pages/thrid/modify_address/modify_address",
+    "pages/thrid/binding-card/binding-card",
+    "pages/thrid/my_card/my_card",
+    "pages/thrid/comment/comment",
+    "pages/thrid/my_account/my_account",
+    "pages/thrid/my_brokerage/my_brokerage",
+    "pages/thrid/my_performance/my_performance",
+    "pages/thrid/order_detail/order_detail",
+    "pages/thrid/invest/invest",
+    "pages/thrid/more_comment/more_comment",
+    "pages/thrid/distribution/distribution",
+    "pages/second/goods_type/goods_type",
+    "pages/second/about/about",
+    "pages/thrid/Distributiondetails/Distributiondetails",
+    "pages/thrid/Purchasing-details/Purchasing-details"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "异性顺风餐",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于展示当前位置，按距离匹配。"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "爆款",
+        "color": "#ccc",
+        "selectedColor": "#fab011",
+        "iconPath": "pages/images/01.png",
+        "selectedIconPath": "pages/images/04.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "送餐",
+        "color": "#ccc",
+        "selectedColor": "#fab011",
+        "iconPath": "pages/images/03.png",
+        "selectedIconPath": "pages/images/06.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "selectedColor": "#fab011",
+        "iconPath": "pages/images/02.png",
+        "selectedIconPath": "pages/images/05.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

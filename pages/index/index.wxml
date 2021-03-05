@@ -1,0 +1,80 @@
+<!--pages/index/index.wxml-->
+<!-- 轮播组件 -->
+<swiper class='swiper' interval='3000' autoplay='{{ true }}' indicator-dots='{{ true }}' circular='{{ true }}'>
+  <block wx:for="{{spannerlist}}" wx:key=""> 
+    <swiper-item>
+      <image class="spanner" src="{{item.image}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="con">
+  <view class="cont">
+    <view class="seatname">
+      <view style="display:flex;">
+        <text class="guest omit" wx:if="{{ user.sex == 1 }}">欢迎'{{ user.username }}'小哥哥~</text>
+        <text class="guest omit" wx:if="{{ user.sex == 2 }}">欢迎'{{user.username}}'小姐姐~</text>
+        <text class="guest omit" wx:if="{{ user.sex == 0 }}">欢迎'{{user.username}}'</text>
+        <text class="welocome">{{welcome}}</text>
+      </view>
+      <view class="seat omit" >当前位置：{{siteInfo}}</view>
+    </view>
+    <view class="ico">
+      <image src="img/01.svg" />
+    </view>
+  </view>
+</view>
+<view class='nav' style=" margin-top: 15rpx;">
+<view class='navs' bind:tap="toHight">
+<image src="img/05.png" />
+<text>高评分</text>
+</view>
+<view class='navs' bind:tap="toSpecialty">
+<image src="img/06.png" />
+<text>特色美食</text>
+</view>
+<view class='navs' bind:tap="toFruits">
+<image src="img/07.png" />
+<text>新鲜水果</text>
+</view>
+<view class='navs' bind:tap="toElse">
+<image src="img/04.png" />
+<text>其他推荐</text>
+</view>
+</view>
+  <!-- 展示的商品列表 -->
+  <view class="detail"  wx:for="{{detailList}}" wx:key="" data-id='{{ item.id }}' bindtap='toDetail'>
+    <view class='number'>
+      <text class="num omit" >{{item.fiery}}</text>
+      <text class="fire">推荐指数</text>
+    </view>
+    <view class="detail-img" >
+      <image mode='{{ widthFix }}' src="{{item.list}}" />
+    </view>
+    <view class="detail-title">
+      <view style="width:550rpx;">
+        <view class="detail-name omit">{{item.title}}</view>
+        <view class="detail-reason omit" ><text>推荐理由：</text>香辣清脆、正宗美味香辣清脆
+        </view>
+      </view>
+      <view class="detail-m">
+        <text id="mon">¥</text>
+        <text id="money"> {{item.price}}</text>
+        <text id="yuan">元</text>
+      </view>
+    </view>
+    <view class="detail-foot">
+      <view class="detail-seat omit">
+        <view class="detail-imgs">
+          <image  src="img/01.svg" />
+        </view>
+        <view class='detail-tex omit'>
+          <text >{{item.sel_address}}</text>
+        </view>
+      </view>
+      <view class="detail-nearby omit">
+        <text wx:if="{{ user.sex == 1 }}" >附近还有{{item.round}}个小姐姐</text>
+         <text wx:if="{{ user.sex == 2}}" >附近还有{{item.round}}个小哥哥</text>
+         <text wx:if="{{ user.sex == 0}}" ></text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,49 @@
+<!--星星评价-->
+<view class="container">
+  <view class="items">
+    <view class="item-up bottom-line">
+      <image class="item-pic" src="{{commentList.shping_image[0].image}}" />
+      <text class="title weight omit">{{commentList.title}}</text>
+    </view>
+  </view>
+  <view class="comment1-description">
+    <block wx:for="{{one_2}}" wx:key="index">
+      <image wx:if="{{ index < 5 }}" class='one-pic' bindtap='in_xin' id='{{index+1}}' data-in='star' src='icon/star.png'></image>
+    </block>
+    <block wx:for="{{two_2}}" wx:key="index">
+      <image class='one-pic' bindtap='in_xin' id='{{index+1}}' data-in='starg' src='icon/hui.png'></image>
+    </block>
+    <view style='padding-left: 20rpx; font-size: 30rpx;'>{{one_2}}星</view>
+  </view>
+  <view class="weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" bindinput="bindTextAreaChange" placeholder="我要提出建议..." style="height: 8em" value="{{info}}" maxlength="{{noteMaxLen}}"  />
+        <view class="weui-textarea-counter">{{noteNowLen}}/{{noteMaxLen}}</view>
+      </view>
+    </view>
+  </view>
+
+  <text class='hint'>上传图片（选填）</text>
+  <view class='pic-list'>
+    <view class='hint-text'>长按图片可以删除哦~</view>
+    <view class="imgLlist">
+      <block wx:for="{{imagsList}}" wx:key="{{item.id}}" wx:for-item="item">
+        <view bindlongpress='delText' data-index='{{index}}'>
+          <image class='list' src="{{item}}" data-src='{{item}}' mode='aspectFit' catchtap='previewImage' />
+        </view>
+      </block>
+      <block wx:if="{{imagsList == ''}}">
+        <view class='unPic'>
+          <image class='ico' src='icon/unPic_ico.png' />
+        </view>
+      </block>
+      <view wx:if="{{ imagsList.length != 6 }}" class="box" bind:tap="gotoShow">
+        <image class="ico" src="icon/add_ico.svg" />
+      </view>
+    </view>
+  </view>
+  <view class="btnSf">
+    <button bindtap="bindSubmit">发布</button>
+  </view>
+</view>

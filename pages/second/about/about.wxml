@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="name" >{{item.title}}</view>
+    <view class="desc" >{{item.detalit}}</view>
+    <view class="address" >公司地址：{{item.address}}</view>
+    <view class="phone" >联系电话：{{item.admin_phone}}</view>
+</view>

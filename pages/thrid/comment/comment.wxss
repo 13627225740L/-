@@ -1,0 +1,149 @@
+/* pages/second/comment/comment.wxss */
+
+
+.container{
+  width: 750rpx;
+}
+
+.items{
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-top: 10rpx solid #f5f5f5;
+}
+
+.item-up{
+  display: flex;
+  flex-direction: row;
+  padding: 16rpx 20rpx;
+  align-items: center;
+  width: 710rpx;
+}
+
+.item-pic{
+  width: 120rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.item-text{
+  width: 710rpx;
+  margin-top: 20rpx;
+}
+
+
+.comment1-description {
+  width: 690rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.one-pic {
+  height: 60rpx;
+  width: 60rpx;
+  display: inline-block;
+}
+
+.weui-cells_after-title {
+  width: 92%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+.btnSf {
+  width: 92%;
+  margin: 30rpx auto;
+}
+
+.btnSf button {
+  background: #57b6ba;
+  color: #fff;
+}
+
+.btnSf button:active {
+  background: #5bc2c6;
+  color: #fff;
+}
+
+
+.weui-textarea{
+  width: 100%;
+  padding: 10rpx 20rpx;
+}
+
+.weui-textarea-counter{
+  text-align: right;
+  color: #868686;
+  padding: 10rpx 20rpx;
+}
+
+/* 上传图片 */
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #fff;
+  margin-left: 20rpx;
+  border: 2rpx solid #efefef;
+}
+
+.unPic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #d9d9d9;
+}
+
+.pic-list {
+  background-color: #fff;
+  height: auto;
+  padding-bottom: 30rpx;
+  padding-left: 30rpx;
+}
+
+.hint-text {
+  padding: 20rpx;
+  font-size: 22rpx;
+  width: 300rpx;
+  color: #a6a6a6;
+}
+
+.imgLlist {
+  display: flex;
+  margin: 0 10rpx;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.imgLlist image {
+  padding: 10rpx;
+  width: 203rpx;
+  height: 160rpx;
+}
+
+.ico {
+  width: 60rpx !important;
+  height: 60rpx !important;
+}
+
+.hint {
+  height: 80rpx;
+  width: 650rpx;
+  padding: 0 50rpx;
+  display: flex;
+  align-items: center;
+}

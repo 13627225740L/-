@@ -1,0 +1,148 @@
+<!-- 引入富文本 -->
+<import src="/utils/wxParse/wxParse.wxml" />
+<!-- 首页轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="4000" circular="true">
+  <block wx:for="{{imageList}}" wx:key=''>
+    <swiper-item>
+      <image src="{{item.image}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 展示商品的参数：名字，简介、价格 -->
+<view class='spch'>
+  <view class='title two-omit'>
+    {{goodsList.title}}
+  </view>
+  <view class='gsname'>
+    {{goodsList.info}}
+  </view>
+  <view class='money'>
+    ￥{{goodsList.price}}
+  </view>
+</view>
+<!-- 选择规格-->
+<view class="norm">
+  <view class="norm-item">
+    <view class="name">规格：</view>
+    <view wx:if="{{sizeList == ''}}">
+      <view class="norms">默认规格</view>
+    </view>
+
+    <view class="norms-list" wx:for="{{sizeList}}" wx:key="id">
+      <view class="norms {{normslistID == item.id ? 'active' : ''}}" data-id="{{item.id}}">{{item.option_name}}</view>
+    </view>
+  </view>
+</view>
+<!-- 评价 -->
+<view style=" background-color:#fff;width:750rpx;margin-top:8rpx; ">
+  <view class='judge'>
+    <view class='judges bottom-line'>
+      <view class='hint'>
+        <text>商品评价</text>
+      </view>
+      <view class="more" bindtap='tomore'>
+        <text>查看更多>></text>
+      </view>
+    </view>
+    <view class="zero" wx:if="{{ reviewsList == '' }}">暂无</view>
+    <!-- 评论列表 -->
+    <block wx:for="{{ reviewsList }}" wx:for-index="i" wx:for-item="item" wx:key="{{}}">
+      <view wx:if="{{ i < 2 }}">
+        <view class='comment bottom-line' style='margin: 10rpx 0; '>
+          <view class='user'>
+            <!-- 用户头像 -->
+            <image class='userAv' src='{{item.usertv}}' />
+            <!-- 用户名 -->
+            <text class='userName omit'>{{item.username}}</text>
+            <!-- 评论星级、实心 -->
+            <block wx:for="{{item.sume}}" wx:key="item">
+              <image class='comment-icon' src='img/star.png'></image>
+            </block>
+            <!-- 评论星级、空心 -->
+            <block wx:for="{{5 - item.sume}}" wx:key="item">
+              <image class='comment-icon' src='img/hui.png'></image>
+            </block>
+            <!-- 评论时间 -->
+            <text class='reviewsTime'>{{ item.create_time }}</text>
+          </view>
+          <!-- 评论内容 -->
+          <text class='info'>{{ item.info}}</text>
+          <!-- 评论图片 -->
+          <view>
+            <!-- item.ping_image  -->
+            <block wx:for="{{ item.ping_image }}" wx:key="">
+              <image class='imag' src='{{ item.image }}' />
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="tabs">
+  <text>商品详情</text>
+</view>
+<view class="detail">
+  <!-- 此处采用插件富文本 -->
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="bottom-tool">
+  <view class="choose-group small-font">
+    <view class="choose cart" bindtap="goindex">
+      <image src="img/01.png" />
+      <view>首页</view>
+    </view>
+  </view>
+  <view class="btn-grounp">
+    <view class="shop all-center" bind:tap="goBuy">立即购买</view>
+  </view>
+</view>
+<!-- 点击立即购买弹出 -->
+<view class='tcc' wx:if="{{showTo==0}}" wx:key="">
+  <view class='a'>
+    <view class='info'>
+      <image src='{{ imageList[0].image }}' />
+      <view class='zhong'>
+        <view class='money'>
+          ￥{{gui_price}}
+        </view>
+        <view class='money' wx:if="{{ sizeList == '' }}">
+          ￥{{goodsList.price}}
+        </view>
+        <view class='kcun'>
+          库存{{goodsList.ku}}件
+        </view>
+        <view class='xzsl'>
+          <view>选择数量</view>
+          <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+            <!-- 数值 -->
+            <input type="number" bindchange="bindManual" value="{{num}}" />
+            <!-- 加号 -->
+            <text class="normal" bindtap="bindPlus">+</text>
+          </view>
+        </view>
+      </view>
+      <icon type="cancel" bindtap='closeShow' size="20" color="gray" />
+    </view>
+    <!-- 选择规格 -->
+    <view class='gg'>
+      <view class='choose-gg'>选择规格</view>
+      <view class='cont'>
+        <view wx:if="{{ sizeList == '' }}">
+          <view>默认规格</view>
+        </view>
+        <block wx:for="{{sizeList}}" wx:key="{{index}}">
+          <view bindtap='choosenorms' class="{{gg_xz==index?'gg_xz':'info-item'}}" data-price="{{item.price}}" data-name="{{item.option_name}}" data-xz="{{index}}" data-id="{{item.id}}">{{item.option_name}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="bottom-tool">
+      <view class="btn-grounps">
+        <view class="shops all-center" bind:tap="submitOrder">提交订单</view>
+      </view>
+    </view>
+  </view>
+</view>

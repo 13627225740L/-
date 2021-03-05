@@ -1,0 +1,151 @@
+/**app.wxss**/
+page{
+  font-size: 28rpx;
+}
+
+
+/* 单行文本溢出省略 */
+.omit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 多行文本溢出省略 */
+.two-omit {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 封装分割线 */
+.hr{
+  background-color:#f6f6f6;
+  margin-top: 20rpx;
+}
+
+/* 文字次色 */
+.grey-5 {
+  color: #8c8c8c;
+}
+
+.grey-4{
+  color: #a6a6a6;
+}
+
+.grey-6{
+  color: #505050;
+}
+
+/* 文字主色 */
+.grey-8 {
+  color: #595959;
+  font-size:30rpx;
+}
+
+/* 字体加粗 */
+.weight{
+  font-weight: bold;
+}
+
+/* 从左到右渐变色 */
+.linear {
+  background: linear-gradient(to right, #ff9100, #ff5722);
+}
+
+/* 间隔线 */
+.right-line {
+  border-right: 2rpx solid #E5E5E5;
+}
+.left-line {
+  border-left: 2rpx solid #E5E5E5;
+}
+.top-line {
+  border-top: 2rpx solid #E5E5E5;
+}
+.bottom-line {
+  border-bottom: 1rpx solid #E5E5E5;
+}
+
+/* 卡片 */
+.card {
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+/* 阴影 */
+.shadow {
+  box-shadow: 0 0.17067rem 0.85333rem 0.18rem rgba(221, 221, 221, 0.507);
+}
+
+/* 分割线 */
+.hr {
+  width: 100%;
+  border-top:2px solid #EEEEEE;
+}
+
+/* 中号字体 */
+.md-font {
+  font-size: 26rpx;
+}
+
+/* 小号字体 */
+.small-font {
+  font-size: 24rpx;
+}
+
+.column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* flex-row-center */
+.row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row-center-between{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row-center-around{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.all-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 图标大小 */
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+#tabBar {
+  position: fixed;
+  bottom: 30rpx;
+}
+
+.placeholder-active{
+  display: none;
+}
+.none{
+  text-align:center;
+  padding-top:30%;
+  font-size:30rpx;
+  color:#777;
+}
+.shz{
+  text-align: center;
+  margin-top:88rpx;
+}

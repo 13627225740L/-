@@ -1,0 +1,188 @@
+/* pages/thrid/Distributiondetails/Distributiondetails.wxss */
+page{
+  background-color: #f8f8f8;
+  width:750rpx;
+}
+.tab-bar {
+  background-color: #fff;
+  width: 750rpx;
+  height: 92rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0.17067rem 0.85333rem 0.18rem#e9e6e6;
+}
+
+.tab {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+}
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16%;
+  height: 100%;
+  margin: 0 2%;
+  font-size: 30rpx;
+}
+.active {
+  font-weight: bold;
+  border-bottom: 4rpx solid #ff5733;
+  margin-bottom: -2rpx;
+}
+
+/* 数组循环 */
+.detail{
+  margin-top:104rpx;
+}
+.Order-details{
+  width: 710rpx;
+  background-color:#fff;
+  border-radius: 30rpx;
+   margin: 20rpx 20rpx 20rpx 20rpx; 
+}
+.top{
+  width: 680rpx;
+  margin: 14rpx 6rpx;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1rpx #eceaead2 solid;
+}
+.top image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left:20rpx;
+}
+.Shopname{
+   color: #5f1100;
+  width: 150rpx;
+}
+.Mealaddress{
+   color: #5f1100;
+  width:350rpx;
+}
+.Meal{
+  font-size: 26rpx;
+  color: #ff5733;
+}
+.Mealintake{
+}
+.goods-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:30rpx; 
+}
+.goods-container image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.goods-right{
+  margin-left: 30rpx;
+}
+.Commoditydetails{
+  display: inline-flex;
+  flex-direction: row;
+}
+.Name-of-meal,.Purchasing-price,.Commoditydetails{
+  width: 490rpx;
+  /* font-size: 34rpx; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #000000;
+}
+.Name-of-meal-text{
+  font-size: 26rpx;
+  width:360rpx;
+}
+.Nametext,.amount{
+  width:102rpx;
+  font-size:32rpx;
+  
+}
+
+.buy{
+   width:110rpx;
+  font-size:32rpx;
+}
+.Commoditydetails-text,.Commoditydetails-rule,.Purchasing-price-text{
+  font-size: 26rpx;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.goods-footer{
+  width: 720rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+.user-top{
+  margin:20rpx 20rpx 0 20rpx;
+  width: 680rpx;
+  border-bottom: solid 1rpx #eceaead2;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
+.user-top image{
+  width: 60rpx;
+  height: 60rpx;
+  /* margin-left:20rpx; */
+}
+.Detailed-address{
+  color: #5f1100;
+  width: 580rpx;
+  margin-left: 20rpx;
+}
+
+
+/* 收货人的信息 */
+.user-container{
+  width: 680rpx;
+  margin:30rpx 20rpx 20rpx 20rpx;
+  /* border-bottom: solid #ccc 1rpx; */
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
+.user-container image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.user{
+  display: inline-flex;
+  flex-direction: column;
+  width: 240rpx;
+  margin-left: 10rpx;
+}
+.name{
+  font-size: 28rpx;
+}
+
+.name-text{
+  font-size: 26rpx;
+}
+.phone{
+  color: #b7b7b7; 
+}
+.Remarks{
+  width: 300rpx;
+  color: #b7b7b7;
+  font-size: 28rpx;
+}
+.Remarks{
+  font-size: 26rpx;
+}

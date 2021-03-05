@@ -1,0 +1,73 @@
+<!--pages/thrid/Purchasing-details/Purchasing-details.wxml-->
+  <!--顶部的收货人信息-头像、昵称、性别 -->
+<view class='user'>
+  <image class='usertv' src="{{ user.usertv }}" />
+  <view class='my'>
+    <view class='name'>{{user.username}}</view>
+    <view class='sex'>
+      <!-- <view class='sexs'> -->
+        <view class='gender'  wx:if="{{user.sex == 1}}">  <image  src="img/03.png" /> 小哥哥</view>
+        <view class='gender' wx:if="{{user.sex == 2}}"> <image  src="img/04.png" /> 小姐姐</view>
+         <view class='gender' wx:if="{{user.sex == 0}}">未知</view>
+      <!-- </view> -->
+    </view>
+  </view>
+  <view class='Money-reward'>赏金：<text>￥{{user.d_price}}</text></view>
+</view>
+
+<view class='goosdetail shadow '>
+  <view class="details">
+    <view class='top'>
+      <image src="img/01.png"/>
+      <text class='title omit' >{{goods.shping_name}}</text>
+      <text class='adress omit'>{{goods.address }}</text>
+    </view>
+    <view class="give{{ currentIndex == index ? active :'' }}" bindtap="Navigation" >导航</view>
+  </view>
+  <view class='detail'>
+    <image src="{{goods.image}}"/>
+    <view class='Detail'>  
+      <view class='mealname '>
+      <text class="hints">餐名：</text><text class='mealname-text omit' >{{goods.title}}</text>
+      </view>
+       <view class="number">
+       <text class="hintnumber"> 数量：</text> 
+        <view class='size-footer'>
+          <text  class='sum'>{{user.sume}}份+</text>
+          <text class="size omit" wx:if="{{ goods.goods_option}}">{{goods.goods_option[0].option_name}}</text>
+          <text class='size omit'  wx:if="{{ !goods.goods_option }}">默认规格</text>
+        </view>
+      </view>
+       <view class='mealname'>
+      <text class="hint">代购费：</text><text class='mealname-text omit' >￥{{user.price}}</text>
+      </view>
+    </view>
+  </view> 
+ </view>
+
+<!-- 收货地址 -->
+<view class='Receiving-goods'>
+  <image src="img/02.png" />
+  <view class='goods-adress omit'>{{user.list.info}}</view>
+  <view class='Tips'>抢单后可见</view>
+</view>
+
+<view class='goods'>
+  <view class='tariff bottom-line'>
+    <text class='buy'>代购价格:</text>
+    <text class='statement'>买家付款冻结、垫资代购送达即可结算体现</text>
+    <text class='price omit'>￥{{user.price}}</text>
+  </view>
+  <view class='tariff bottom-line'>
+    <text class='buy'>平台代购补助:</text>
+    <text class='statement'>花果园区域每单配送补助{{user.platform_price}}元</text>
+    <text class='Subsidy-price omit'>￥{{user.platform_price}}</text>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class='bottom'>
+  <text class='g-price-text'>预计获得：</text>  
+  <text class='g-price'>￥{{ total }}</text>
+  <view class='submit' data-index='0' data-id='{{ item.id }}'  bindtap='goPay'>立即抢单</view>
+</view>

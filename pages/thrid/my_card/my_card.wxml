@@ -1,0 +1,44 @@
+<!--pages/second/my_card/my_card.wxml-->
+<!-- 使用跳转页面 -->
+<view class="box">
+  <view class="item" style='border-top: 2rpx solid #eeeeee;' wx:for="{{bankList}}" wx:key="index">
+    <view class='item-box' data-id='{{ item.id }}' bindtap='toReturn'>
+      <view class='card-views' style="margin:0 auto;" >
+        <image  class='img' src="img/01.png" ></image>
+        <view class="tit">
+          <text class='title omit' >{{item.bank}}</text>
+          <text class='md_font omit' style='font-size: 26rpx !important;'>姓名：{{name}}</text>
+          <text class='md_font omit' style='font-size: 26rpx !important;'>联系电话：{{phone}}</text>
+        </view>
+      </view>        
+      <view class='card-view'>
+        <view class='card-num  omit'>
+          {{cardNum}}
+        </view>
+      </view>
+    </view>
+    <!-- 设为默认 -->
+    <view class="box-right" wx:if="{{ type_id == 0 }}">
+      <view class="b-r-t" data-id='{{ item.id }}' data-stctic='{{ item.stctic }}' bind:tap="tomore">
+        <text wx:if="{{ item.stctic == 0 }}">默认</text>
+        <text wx:if="{{ item.stctic == 1 }}">设为默认</text>
+      </view>
+      <view class="b-r-t" data-stctic='{{ item.stctic }}' data-id='{{ item.id }}' bind:tap="toDel">
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='item' wx:if="{{ type_id == 0 }}" style='margin-top: 12rpx;'>
+    <view class="card all-center" style="display:flex;">
+      <view>
+        <image class='icon' src="/pages/thrid/deposit/img/02.png"></image>
+      </view>
+      <view data-id='{{ goodsList.id }}' bindtap='towhite'>
+        <text>添加银行卡</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 设为默认 -->

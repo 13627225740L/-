@@ -1,0 +1,65 @@
+<!--pages/thrid/Distributiondetails/Distributiondetails.wxml-->
+<!-- 顶部导航栏 -->
+<view class="tab-bar ">
+    <view class="tab">
+        <block wx:for="{{tabList}}" wx:key="index">
+            <view class="tab-item {{currentIndex == index ? 'active' : ''}}" data-index="{{index}}" bind:tap="onChange" data-id="{{item.id}}">{{item.name}}
+            </view>
+        </block>
+    </view>
+</view>
+<!-- 订单详情-->
+<view class='detail shadow'>
+  <block wx:for="{{orderList}}" data-index ='{{index}}'  wx:key="">
+    <view class='Order-details' data-pay_id="{{ item.list[0].pay_id }}"  bindtap='toDetils'>
+      <view class='top'>
+      <image  src="img/01.png" />
+      <view class='Shopname omit'>{{item.list[0].shping_name}}</view>
+      <view class='Mealaddress omit'>{{item.list[0].sel_address}}</view>
+      <view class='Meal'>
+        <view class='Mealintake' wx:if="{{item.sd == 0}}">待购取</view>
+        <view class='Mealintake' wx:if="{{item.sd == 1}}">待配送</view>
+        <view class='Mealintake' wx:if="{{item.sd == 2}}">已完成 </view>
+      </view>
+    </view>
+  <view class='goods-container'>
+    <image src="{{item.list[0].image}}" />
+    <view class='goods-right'>
+      <view class='Name-of-meal omit'>
+      <text class="Nametext">餐名：</text> <text class='Name-of-meal-text omit' >{{item.list[0].title}}</text>
+      </view>
+      <view  class='Commoditydetails omit'>
+        <text class='amount'> 数量： </text><text class='Commoditydetails-text'>{{item.list[0].sum}}+</text>
+        <view class='Commoditydetails-rule'  wx:if="{{item.list[0].goods_option }}">{{item.list[0].goods_option.option_name}}</view>
+        <view class='Commoditydetails-rule'  wx:if="{{ !item.list[0].goods_option }}">默认规格</view>
+      </view>
+      <view class='Purchasing-price omit'>
+      <text class='buy'>代购价：</text><text class='Purchasing-price-text'>￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='goods-footer'>
+    <view class='user-top'>
+      <image src="img/02.png" />
+      <view class='Detailed-address'>
+        {{item.address.info}}
+      </view>
+    </view>
+    <view class='user-container'>
+      <image src='{{item.username}}'/>
+      <view class='user'>
+        <view class='name'>收货人：
+        <text class='name-text omit'>{{item.address.names}} </text>
+        </view>
+        <view  class='phone'>{{item.address.phone}}</view>
+      </view>
+      <view class='Remarks two-omit'>备注：<text>{{item.info}}</text> </view>
+    </view>
+  </view>
+  </view>
+  </block>
+</view>
+<!-- 占位符 -->
+<view style="height:50rpx;"></view>
+
+  

@@ -1,0 +1,194 @@
+/* pages/second/Vousher/Vousher.wxss */
+
+page {
+  width: 750rpx;
+  background-color: #f5f5f5;
+}
+
+.top {
+  width: 100%;
+  height: 220rpx;
+  background-color: #469af8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80rpx 10rpx;
+}
+
+#your {
+  color: #fff;
+  font-size: 26rpx;
+}
+
+#money {
+  font-size: 80rpx;
+  color: #fff;
+}
+
+/* 充值提现 */
+
+.containe {
+  width: 100%;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.con, .cont {
+  width: 35%;
+  height: 70rpx;
+  /* line-height: 70rpx; */
+  border-radius: 35rpx;
+  background-color: #469af8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.Vosaher {
+  width: 100%;
+  margin: 20rpx auto;
+  background-color: #fff;
+}
+
+.vosher {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.vosherlist {
+  width: 680rpx;
+  margin: 0 auto;
+  display: flex;
+  height: 70rpx;
+  justify-content: space-around;
+}
+
+.voshers, .vosher-time {
+  font-size: 26rpx;
+  /* color: #ccc; */
+  display: flex;
+  align-items: center;
+}
+
+.voshers {
+  width: 210rpx;
+}
+
+.vosher-time {
+  width: 260rpx;
+}
+
+.vosher-number {
+  width: 210rpx;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 弹出层 */
+
+
+/* 底部弹出 */
+
+.dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.dialog_container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+
+.dialog_show .dialog_container {
+  transform: translateY(0);
+}
+
+.dialog_show .dialog_mask {
+  display: block;
+}
+
+.item-view{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 690rpx;
+  padding: 10rpx 30rpx;
+  margin-top: 10rpx;
+}
+
+.title{
+  width: 100%;
+  height: 60rpx;
+  color: #505050;
+}
+
+.price{
+  width: 100%;
+  padding: 20rpx 0 14rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price-hint{
+  font-size: 60rpx;
+  margin-right: 10rpx;
+
+}
+
+.price-input{
+  font-size: 80rpx;
+  color: #2d2d2d;
+  height: auto;
+}
+
+.img{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.balance{
+  display: flex;
+  flex-direction: row;
+  padding: 26rpx 0 ;
+}
+
+/* 充值按钮 */
+.but-view{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #469af8;
+  color: #fff;
+  border-radius: 30rpx;
+  font-size: 32rpx;
+  width: 630rpx;
+  height: 100rpx;
+}

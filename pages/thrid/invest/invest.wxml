@@ -1,0 +1,13 @@
+<!--pages/thrid/invest/invest.wxml-->
+<!-- 充值页面 -->
+<image class='top' mode='widthFix' src="{{image}}" />
+<!-- 充值套餐选择 -->
+  <view class='combo'>充值套餐</view>
+  <!-- 套餐选择 -->
+<view class="cont">
+  <block wx:for="{{combolist}}" wx:key="{{ index }}">
+    <view class=" omit {{ activeC == index ? 'active':'info-item'}}" data-index='{{ index }}' data-id='{{ item.id }}' bindtap='toChange'>{{ item.title }}</view>
+  </block>
+</view>
+<!-- 确认选择 -->
+<view class='select' bindtap='goPay'>确认选择</view>

@@ -1,0 +1,24 @@
+<!--pages/second/apply/apply.wxml-->
+<view class="picker">
+  <image style="width:170rpx;height:170rpx;" src="img/01.svg" />
+</view>
+
+  
+  <view class="con">
+  <text>审核中...</text>
+  </view>
+  
+  <view class="cont">
+  <text>一个工作日即可审核完毕</text>      
+  </view>
+
+  <view class="contt">
+  <text>请耐心等待哟~~~</text>
+  </view>
+
+<!-- 页面跳转地址为设置 -->
+<view class="footer">
+  <view class="button-in" bindtap='tohome'>返回首页</view>
+  <view class="button-my" bindtap='tomy'>个人中心</view>
+</view>
+

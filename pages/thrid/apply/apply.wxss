@@ -1,0 +1,80 @@
+/* pages/second/apply/apply.wxss */
+
+.page {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.picker {
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.con test {
+  font-size: 56rpx;
+  color: #505050;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+
+.cont text {
+  font-size: 32rpx;
+  color: #555;
+}
+
+.contt {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+.contt text {
+  font-size: 28rpx;
+  color: #fe5d3a;
+}
+
+/* 按钮 */
+
+.footer {
+  width: 600rpx;
+  padding: 20rpx 75rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  width: 260rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #a6a6a6;
+  border: 2rpx solid #a6a6a6;
+}
+
+.button-my {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  width: 260rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  background-color: #ff5733;
+  color: #fff;
+}

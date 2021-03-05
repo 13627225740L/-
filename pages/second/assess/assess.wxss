@@ -1,0 +1,166 @@
+/* pages/second/assess/assess.wxss */
+page{
+  background-color: #f5f5f5;
+}
+
+.tab-bar {
+  width: 750rpx;
+  height: 92rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-top: 2rpx solid #f7f7f7;
+
+}
+
+.tab {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #ffffff;
+}
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16%;
+  height: 100%;
+  margin: 0 2%;
+  font-size: 26rpx;
+}
+
+.active {
+  color: #ff5733;
+  font-weight: bold;
+  border-bottom: 4rpx solid #ff5733;
+  margin-bottom: -4rpx;
+}
+
+/* 订单 */
+
+.order {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+  margin-top: 70rpx;
+}
+
+.order-item {
+  width: 710rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 15rpx;
+  border-radius: 16rpx;
+  margin-top: 20rpx;
+}
+
+.odear-up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+
+.num{
+  color: #d4d4d4;
+}
+
+
+.order-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 6rpx;
+}
+
+.goods-pic {
+  width: 220rpx;
+  height: 180rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.order-center-right {
+  display: flex;
+  flex-direction: column;
+  width: 440rpx;
+}
+
+.right-up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goods-name {
+  width: 400rpx;
+}
+
+.goods-price {
+  width: 150rpx;
+}
+
+.right-bot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 40rpx;
+  justify-content: space-between;
+}
+
+.size {
+  width: 180rpx;
+}
+
+.goods-number {
+  width: 80rpx;
+}
+
+.pj{
+  padding: 10rpx 10rpx 20rpx 10rpx;
+  text-align: right;
+  display: flex;
+  width: 670rpx;
+  justify-content: flex-end;
+}
+
+
+.item-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  margin-bottom: 18rpx;
+}
+
+.warning {
+  border: 2rpx solid #ff5733;
+  font-size: 24rpx;
+  width: 170rpx;
+  height: 46rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30rpx;
+  color: #ff5733;
+  margin-left: 20rpx;
+}

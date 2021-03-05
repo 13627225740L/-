@@ -1,0 +1,340 @@
+/* pages/thrid/order_detail/order_detail.wxss */
+
+page {
+  width: 750rpx;
+  background-color: #f8f8f8;
+}
+/* 订单详情页面 */
+.goosdetail{
+  border-radius: 30rpx;
+  border: 1rpx #ccc #cdcdcd;
+  width:710rpx;
+  margin:10rpx auto;
+  padding:4rpx 0rpx 10rpx 10rpx;
+  background-color:#fff;
+}
+.details {
+  width: 700rpx;
+  display:inline-flex;
+  margin: 10rpx auto;
+}
+.top{
+  display:inline-flex;
+  flex-direction: row;
+  width:586rpx;
+  align-items: center;
+  /* margin-right: 20rpx; */
+}
+.top image{
+  width:50rpx;
+  height:50rpx;
+  margin-left: 20rpx;
+}
+.top text{
+  font-size:28rpx;
+  display: flex;
+  align-items: center;
+}
+.title{
+  width:80rpx;
+}
+.adress{
+  width:320rpx;
+  font-size: 30rpx;
+  display: inline-flex;
+}
+.give{
+  border:solid 1rpx #b5b5b5 ;
+  width:100rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36rpx;
+  border-radius: 12rpx;
+}
+.active {
+  color: #ff5733;
+  font-weight: bold;
+  }
+  
+.detail {
+  width: 700rpx;
+  margin: 10rpx auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Detail {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+
+.detail image {
+  border-radius: 12rpx;
+  width: 160rpx;
+  height: 156rpx;
+}
+.hints{
+  width:100rpx;
+  font-size: 32rpx;
+}
+.hintnumber{
+  font-size: 34rpx;
+}
+.hint{
+  font-size: 34rpx;
+  width: 140rpx;
+}
+.mealname{
+  display: inline-flex;
+  align-items: center;
+  width:520rpx;
+}
+.number{
+  display: inline-flex;
+  flex-direction: row;
+}
+.mealname-text{
+  font-size: 28rpx;
+  width:380rpx;
+}
+.mealname-texts{
+  font-size: 28rpx;
+  width:350rpx;
+}
+.size{
+  font-size: 28rpx;
+}
+#hints{
+  width: 100rpx;
+  font-size:34rpx;
+}
+.title-price {
+  width: 500rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 30rpx;
+  width: 160rpx;
+}
+
+.Adress-footer {
+  width: 700rpx;
+  margin: 10rpx auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.sizes {
+  font-size: 30rpx;
+}
+
+.Aress {
+  margin-left: 10rpx;
+}
+
+.size-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.sum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 收货人详情 */
+.Consignee{
+  background-color: #fff;
+  width: 720rpx;
+  margin:30rpx auto;
+  border-radius:25rpx;
+}
+.container{
+width:700rpx;
+display:inline-flex;
+margin:10rpx auto;
+}
+.receiver{
+  display:inline-flex;
+  flex-direction: row;
+  width:590rpx;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.receiver image{
+  width:60rpx;
+  height: 60rpx;
+  margin-left:26rpx
+}
+.seat{
+   width:420rpx;
+  display: inline-flex;
+  font-size:28rpx;
+}
+/* 收货人的头像、昵称、电话 */
+.user{
+  width:680rpx;
+  display:inline-flex;
+  margin-left:34rpx;
+  margin-top:30rpx;
+}
+.usertv{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+}
+.users{
+  display:inline-flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  justify-content:center;
+  align-items: center;
+  width: 400rpx;
+  
+}
+.usersname{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 350rpx;
+}
+.name,phone{
+  margin-left: 10rpx;
+  font-size:28rpx;
+  display:inline-flex;
+  align-items:center;
+
+}
+.phone{
+  color: #a2a2a2;
+}
+
+/* 联系他 */
+.contact{
+  width: 180rpx;
+}
+.contact image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 70rpx;
+}
+/* 获取买家留言 */
+.message{
+  width:680rpx;
+  display:inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:34rpx;
+  margin-top:12rpx;
+  padding-bottom: 20rpx;
+}
+.say{
+  width:140rpx;
+  font-size: 32rpx;
+  color: #8c8c8c;
+}
+.leaving{
+  width: 500rpx;
+  font-size: 28rpx;
+  color: #8c8c8c;
+}
+
+/* 商品的价格详情 */
+.goods{
+  background-color:#fff;
+  width: 100%; 
+  margin-top:30rpx;
+}
+.tariff{
+  margin-top:10rpx;
+  height:80rpx;
+  display:flex;
+  align-items:center;
+}
+.buy{
+  margin-left:44rpx;
+font-size:32rpx;
+display:flex;
+align-items:center;
+}
+.statement{
+  font-size:24rpx;
+  color:#9b9b9b;
+  display:flex;
+  align-items:center;
+}
+.price{
+  display:inline-flex;
+  margin-left:20rpx;
+  color:#ff6a4b;
+  width:100rpx;
+  margin-bottom: 10rpx;
+  align-items:center;
+}
+.Subsidy-price{
+  display:inline-flex;
+  align-items:center;
+  margin-left:92rpx;
+  color:#ff6a4b;
+  width:100rpx;
+  margin-bottom: 10rpx;
+}
+.reward-price{
+  align-items:center;
+  display:inline-flex;
+  margin-left:276rpx;
+  color:#ff6a4b;
+  width:100rpx;
+  margin-bottom: 10rpx;
+}
+/* 底部 */
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2rpx -4rpx 8rpx #a7a6a652;
+  z-index: 9;
+  font-size: 32rpx;
+}
+
+.g-price-text {
+  width: 180rpx;
+  margin-left: 40rpx;
+}
+
+.g-price {
+  width: 270rpx;
+  font-weight: bold;
+  color:#ff5723;
+}
+
+.submit {
+  width: 260rpx;
+  height: 100%;
+  background-color: #ff5733;
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

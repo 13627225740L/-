@@ -1,0 +1,115 @@
+/* 商品列表 */
+.detail {
+ width: 750rpx;
+ height: auto;
+ margin-top: 15rpx;
+ background-color: #fff;
+ margin-bottom: 20rpx;
+}
+.number {
+ width: 100rpx;
+ height: 100rpx;
+ border: solid 1rpx #ff5733;
+ background-color: #ff5733;
+ border-radius: 50%;
+ position: absolute;
+ z-index: 9;
+ display: flex;
+ right: 20rpx;
+ margin-top: 20rpx;
+ flex-flow: column;
+}
+.number text {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #fff;
+}
+.num {
+ font-size: 34rpx;
+}
+.fire {
+ font-size: 24rpx;
+}
+.detail-img {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.detail-img image {
+ width: 96%;
+ height: 300rpx;
+ border-radius: 30rpx;
+ padding-top: 10rpx;
+}
+.detail-title {
+ display: flex;
+ width: 700rpx;
+ margin: 0 auto;
+}
+.detail-name {
+ font-size: 30rpx;
+}
+.detail-reason {
+ font-size: 28rpx;
+ color: #9f7f19;
+ margin-bottom: 5rpx;
+}
+.detail-m {
+ width: 150rpx;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#mon {
+ color: #ff5733;
+ font-size: 30rpx;
+}
+#money {
+ color: #ff5733;
+ margin-left: 8rpx;
+}
+
+#yuan {
+ color: #a6a6a6;
+ font-size: 24rpx;
+ margin-left: 8rpx;
+}
+
+.detail-foot {
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ justify-content: space-between;
+ padding: 10rpx 25rpx;
+ width: 700rpx;
+}
+
+.detail-seat {
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ width: 420rpx;
+ font-size: 22rpx;
+ color: #b29846;
+}
+
+.detail-imgs,.detail-imgs image {
+ width: 40rpx;
+ height: 40rpx;
+}
+
+.detail-tex {
+ width: 350rpx;
+}
+
+.detail-tex text {
+ margin-left: 10rpx;
+}
+
+.detail-nearby {
+ width: 260rpx;
+ font-size: 24rpx;
+ color: #b29846;
+}

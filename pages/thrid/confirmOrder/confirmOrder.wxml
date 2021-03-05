@@ -1,0 +1,117 @@
+<!-- 提交订单 -->
+<!-- 地址栏 -->
+<view class='top' data-id="{{site.id}}" bind:tap="xgdz">
+  <view class='address'>
+    <view class='name-phone'>
+      <view class='name omit'>{{dd_address.names}}</view>
+      <view class='phone'>{{phone}}</view>
+    </view>
+    <view class='address-name omit'>{{dd_address.address}},{{ dd_address.info }}</view>
+  </view>
+  <view class='top-img' >
+    <image src="img/01.png"/>
+  </view>
+</view>
+
+<view class='placeholder'></view>
+
+<view class="details bottom-line ">订单详情</view>
+<block wx:for="{{items}}" wx:key="">
+  <view class='detail'>
+    <image src="{{item.image}}"/>
+    <view class='Detail'>  
+      <view class='title-price'>
+        <view class='title two-omit'>{{item.title}}</view>
+        <view class='price '>
+          <text>￥</text>
+          <view class='price-number omit'>{{item.price}}</view>
+          <text>元</text>
+        </view>
+      </view>
+      <view class='size-footer'>
+        <view class="size" wx:if="{{ goods_option }}">规格/尺寸：{{item.goods_option[0].item.option}}</view>
+        <view class='size'  wx:if="{{ !goods_option }}">规格/尺寸：默认规格</view>
+        <view class='sum'>x{{item.sum}}</view>
+      </view>
+    </view>
+  </view> 
+</block>
+
+<!-- 商品合计金额 -->
+<view class='total bottom-line'>
+  <text class='text'>商品合计</text>
+  <text class='total-price omit'>￥{{price}}</text>
+</view>
+<!-- 运费 -->
+<!-- <view class='total bottom-line'>
+  <text class='text' style='width: 200rpx !important;'>打赏金额：</text>
+  <input bindinput='inputs' placeholder='最低打赏金额1元，默认为1元。' type='number' value='1' placeholder-style='text-align: left;'  class='total-price omit' style='width: 460rpx !important;' ></input>元
+</view> -->
+
+<view class='combo '>打赏金额</view>
+  <!-- 套餐选择 -->
+<view class="cont bottom-line">
+  <block wx:for="{{combolist}}" wx:key="{{ index }}">
+    <view class=" omit {{ activeC == index ? 'active':'info-item'}}" data-index='{{ index }}' data-id='{{ item.id }}' bindtap='toChange'>{{ item.title }}</view>
+  </block>
+</view>
+<!-- 买家留言 -->
+<view class='compile'>
+  <view class='up-hint'>买家留言:（选填）</view>
+  <textarea class='input' placeholder='输入内容~' placeholder-class='style'  bindinput='getContent'></textarea>
+</view>
+
+<!-- 底部 -->
+<view class='bottom'>
+  <text class='g-price-text'>合计金额：</text>
+  <text class='g-price'>￥{{ zPrice }}</text>
+  <view class='submit' data-index='0' bindtap='goPay'>确认购买</view>
+</view>
+
+<!-- 底部支付方式选择弹出 -->
+<view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+    <view class="dialog_mask" bindtap="onClickdiaView" />
+    <view class="dialog_container">
+        <!-- //此区域自定义视图 -->
+        <view class="flex_Center" style="height:350rpx;background:white;">
+            <view class="bottom-untils" style="color:#333;font-size:30rpx;">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio">
+                        <!-- 余额支付 -->
+                        <radio value="1" checked="true" color="#ff5733" class="balance-rad bottom-line">
+                            <view class="balance">
+                              <view class="balance-left-up">
+                                  <text class="text">余额支付</text>
+                              </view>
+                              <view class="balance-left-bot">
+                                  <image class="balance-ico" src="img/01.png" />
+                                  <text class="md-font grey-4">当前余额：</text>
+                                  <view class="balance-num md-font omit">￥{{balance}}</view>
+                              </view>
+                            </view>
+                        </radio>
+                        <!-- 微信支付 -->
+                        <radio value="2" color="#ff5733" class="balance-rad bottom-line">
+                            <view class="onLine">
+                                <text class="onLine-text">微信在线支付</text>
+                                <view class="onLine-bot">
+                                    <image class="safety-ico" src="img/01.png" />
+                                    <text class="md-font grey-4">微信安全支付</text>
+                                </view>
+                            </view>
+                        </radio>
+                    </label>
+                </radio-group>
+                <!-- 底部工具栏 -->
+                <view class="bot-bar">
+                    <view class="bot">
+                        <view class="total22">应付金额
+                          <view class="totalPrice omit">￥{{zPrice}}</view>
+                        </view>
+                        <view class="goPay" data-id="{{item.id}}" bind:tap="goBuy">立即支付</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

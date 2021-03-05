@@ -1,0 +1,37 @@
+<!-- 商品列表 -->
+<view class="detail shadow" wx:for="{{detailList}}" wx:key="" data-id='{{ item.id }}' bindtap='toDetail'>
+  <view class='number'>
+    <text class="num omit">{{item.fiery}}</text>
+    <text class="fire">火热指数</text>
+  </view>
+  <view class="detail-img">
+    <image mode='{{ widthFix }}' src="{{item.list}}" />
+  </view>
+  <view class="detail-title">
+    <view style="width:550rpx;">
+      <view class="detail-name omit">{{item.title}}</view>
+      <view class="detail-reason omit">
+        <text>推荐理由：</text>
+        香辣清脆、正宗美味香辣清脆
+      </view>
+    </view>
+    <view class="detail-m">
+      <text id="mon">¥</text>
+      <text id="money">{{item.price}}</text>
+      <text id="yuan">元</text>
+    </view>
+  </view>
+  <view class="detail-foot">
+    <view class="detail-seat omit">
+      <view class="detail-imgs">
+        <image src="img/01.svg" />
+      </view>
+      <view class='detail-tex omit'>
+        <text>{{item.sel_address}}</text>
+      </view>
+    </view>
+    <view class="detail-nearby omit">
+      附近还有3999个小姐姐
+    </view>
+  </view>
+</view>

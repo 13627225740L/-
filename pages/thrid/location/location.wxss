@@ -1,0 +1,118 @@
+/* pages/thrid/location/location.wxss */
+page {
+  background-color: #f5f5f5;
+  width: 750rpx;
+  padding-top: 10rpx;
+}
+
+.site-bar {
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  width: 670rpx;
+}
+
+.name{
+  font-size: 32rpx;
+  margin-right: 60rpx;
+  margin-left: 20rpx;
+}
+
+.phone{
+  font-size: 26rpx;
+}
+
+.site {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.site-ico {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.site-text {
+  width: 500rpx;
+  color: #5d5d5d;
+}
+
+.set {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20rpx;
+}
+
+.left {
+  color: #505050;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+}
+
+.compile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rpx;
+  font-size: 26rpx;
+  color: #a6a6a6;
+}
+
+.compile image {
+  margin-left: 10rpx;
+}
+
+/* 底部工具栏 */
+
+.bot {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2rpx -4rpx 8rpx #8d8c8c6c;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #469af8;
+  color: #fff; */
+}
+
+.add-pic {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.add-text {
+  font-size: 32rpx;
+  padding-left: 10rpx;
+  padding-bottom: 2rpx;
+}

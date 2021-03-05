@@ -1,0 +1,4 @@
+<view wx:if="{{isScope}}">
+  <image src='/pages/images/logo.png'></image>
+  <button type='primary' open-type="getUserInfo" bindgetuserinfo="xc">我知道了</button>
+</view>

@@ -1,0 +1,758 @@
+/* pages/detail/detail.wxss */
+@import "/utils/wxParse/wxParse.wxss";
+
+page {
+  background-color: #f6f6f6;
+  height: 100%;
+}
+
+/* 轮播图样式 */
+
+swiper {
+  height: 500rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 500rpx;
+}
+
+/* 商品参数 */
+
+.spch {
+  padding: 20rpx;
+  line-height: 55rpx;
+  background-color: white;
+}
+
+.spch .yfinf {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.spch .title {
+  font-size: 34rpx;
+  line-height: 40rpx;
+}
+
+.spch .gsname {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.spch .money {
+  color: #ff703a;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.spch .yfinfo {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.yfinfo {
+  margin-left: auto;
+}
+
+.yfinfo image {
+  height: 50rpx;
+  width: 50rpx;
+  vertical-align: middle;
+}
+
+/* 商品详情 */
+
+/* 商品规格部分 */
+
+.norm {
+  margin-top: 10rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.norm-item {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.norm-item .name {
+  font-size: 30rpx;
+}
+
+.attr-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.attr {
+  padding: 4rpx 10rpx;
+  margin-right: 16rpx;
+  background-color: #f3f2f8;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+}
+
+.attr-list .active {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+.norms-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+  /* background-color: #505050; */
+}
+
+.norms {
+  padding: 4rpx 10rpx;
+  margin-right: 16rpx;
+  background-color: #f3f2f8;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.colour-list .active {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+/* stepper */
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 4rpx;
+  height: 40rpx;
+  text-align: center;
+}
+
+.minus {
+  padding: 0 10rpx;
+  border-right: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.plus {
+  padding: 0 10rpx;
+  border-left: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.number {
+  width: 70rpx;
+  font-size: 24rpx;
+}
+
+/* 规格、数量 */
+
+.size-num {
+  width: 690rpx;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0;
+  line-height: 80rpx;
+}
+
+.size {
+  background-color: #f3f2f8;
+  height: 40rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rpx 10rpx;
+  margin: 10rpx 10rpx 0 0;
+}
+
+.sizeActive {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+.norm-item {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 4rpx;
+  height: 40rpx;
+  text-align: center;
+}
+
+.minus {
+  padding: 0 10rpx;
+  border-right: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.plus {
+  padding: 0 10rpx;
+  border-left: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.number {
+  width: 70rpx;
+  font-size: 24rpx;
+}
+
+.norm {
+  margin-top: 10rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.norm-item {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.norm-item .name {
+  font-size: 32rpx;
+}
+
+.attr-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.attr {
+  padding: 4rpx 10rpx;
+  margin-right: 16rpx;
+  background-color: #f3f2f8;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+}
+
+.attr-list .active {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+.colour-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.colour {
+  padding: 4rpx 10rpx;
+  margin-right: 16rpx;
+  background-color: #f3f2f8;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+}
+
+.colour-list .active {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+/* stepper */
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 4rpx;
+  height: 40rpx;
+  text-align: center;
+}
+
+.minus {
+  padding: 0 10rpx;
+  border-right: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.plus {
+  padding: 0 10rpx;
+  border-left: 1rpx solid #d9d9d9;
+  line-height: 40rpx;
+  width: 30rpx;
+}
+
+.number {
+  width: 70rpx;
+  font-size: 24rpx;
+}
+
+/* tabs部分 */
+
+.tabs {
+  background-color: #fff;
+  width: 100%;
+  padding: 20rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3rpx;
+}
+
+.tabs text {
+  font-size: 32rpx;
+}
+
+/* 商品详情 */
+
+.detail {
+  background-color: #fff;
+  padding-top: 50rpx;
+  margin-bottom: 100rpx;
+  padding: 10rpx;
+}
+
+.goods-image {
+  width: 750rpx;
+  vertical-align: top;
+}
+
+/* 商品评论 */
+
+.comment {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120rpx;
+}
+
+.co-item {
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 710rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.username {
+  margin-left: 20rpx;
+}
+
+.content {
+  margin-top: 20rpx;
+}
+
+/* 底部区域 */
+
+.bottom-tool {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border-top: 1rpx solid #fafafa; */
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+button[plain] {
+  border: none;
+}
+
+button {
+  height: 66rpx;
+  width: 40rpx;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.service_pic {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.choose-group {
+  width: 50%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2rpx -2rpx 4rpx rgba(210, 210, 211, 0.5);
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+}
+
+.choose image {
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.choose-icon {
+  padding: 0;
+  margin: 0;
+}
+
+.choose-text {
+  line-height: 26rpx;
+}
+
+.btn-grounp {
+  width: 50%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.add-cart {
+  width: 50%;
+  height: 100rpx;
+  background-color: #ff703a;
+}
+
+.shop {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ff703a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.cart {
+  position: relative;
+}
+
+.num {
+  color: #fff;
+  background-color: #ff703a;
+  padding: 0 10rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: -4rpx;
+  right: -4rpx;
+}
+
+/* 立即购买样式 */
+
+/* 弹出层样式 */
+
+.tcc {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 31, 0.5);
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.tcc .a .info, .gg, .sl {
+  padding: 20rpx;
+}
+
+.tcc .a {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  position: relative;
+  bottom: -44%;
+}
+
+.tcc .a .info {
+  display: flex;
+  flex-flow: row;
+}
+
+.tcc .a .info image {
+  width: 194rpx;
+  height: 194rpx;
+}
+
+.tcc .a .info view {
+  line-height: 38rpx;
+}
+
+.tcc .a .info  icon {
+  position: relative;
+  left: 32rpx;
+  height: 50rpx;
+}
+
+.tcc .a .info .zhong {
+  padding-left: 20rpx;
+  width: 439rpx;
+  line-height: 80rpx;
+}
+
+.zhong .money {
+  color: #ff703a;
+}
+
+.zhong .kcun {
+  margin-top: 10rpx;
+  color: gray;
+  font-size: 28rpx;
+}
+
+.zhong .xzsl {
+  margin-top: 40rpx;
+  font-size: 28rpx;
+}
+
+.tcc .a {
+  font-size: 26rpx;
+}
+
+.cont {
+  width: 700rpx;
+  padding: 30rpx 15rpx;
+  display: flex;
+}
+
+.info-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #808080;
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  padding: 8rpx 10rpx;
+  margin: 10rpx;
+  /* width: 214rpx; */
+}
+
+/* 选择规格样式 */
+
+.gg_xz {
+  background-color: #ff703a;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+  padding: 8rpx 10rpx;
+  margin: 10rpx;
+}
+
+.tcc .a .sl {
+  margin-top: 50rpx;
+}
+
+.tcc .a .sl label {
+  font-size: 24rpx;
+  color: #505050;
+  float: left;
+}
+
+/*主容器*/
+
+.stepper {
+  height: 52rpx;
+  /*给主容器设一个边框*/
+  border: 1px solid #ccc;
+  border-radius: 6rpx;
+  margin: 0 auto;
+  float: right;
+  margin-top: -30rpx;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 38rpx;
+  line-height: 52rpx;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 80rpx;
+  height: 52rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #ccc;
+}
+
+.qd {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background-color: #00baad;
+  height: 84rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.qd view {
+  margin-top: 20rpx;
+}
+
+.btn-grounps {
+  margin: 0 auto;
+  height: 90rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shops {
+  width: 400rpx;
+  margin: 0 auto;
+  height: 90rpx;
+  background-color: #ff703a;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #fff;
+  box-shadow: 2rpx 4rpx 8rpx #ff703a;
+}
+
+.judge {
+  width: 700rpx;
+  height: auto;
+  margin: 0 auto;
+}
+
+.judges {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hint, .more {
+  font-size: 32rpx;
+}
+.more text {
+  color: #f54721;
+}
+.zero{
+  font-size: 28rpx;
+  
+}
+/* 评论列表 */
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 690rpx;
+  padding: 20rpx 30rpx;
+  height: auto;
+  background-color: #fff;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.userAv {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.userName {
+  width: 160rpx;
+  font-size: 26rpx;
+}
+
+.reviewsTime {
+  font-size: 24rpx;
+  color: #ccc;
+  width: 300rpx;
+  text-align: right;
+}
+
+.info {
+  width: 620rpx;
+  height: auto;
+  padding: 20rpx 30rpx 10rpx 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.imag {
+  display: inline-flex;
+  align-items: center;
+  width: 210rpx;
+  height: 160rpx;
+  margin: 10rpx;
+}
+
+.comment-icon {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+}

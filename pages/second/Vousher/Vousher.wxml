@@ -1,0 +1,54 @@
+<!-- 账户余额中心 -->
+<!-- 顶部 -->
+<view class='top'>
+  <text id='your'>你的账户余额（元）</text>
+  <text id="money">{{balance}}</text>
+  <text id='your'>元</text>
+</view>
+<view class='containe'>
+  <view class='con' data-index='0' bindtap='toRecharge' >充值</view>
+  <view class='cont' bindtap='toapply' >提现</view>
+</view>
+<!-- 充值记录 -->
+<view class='Vosaher'>
+  <view class='vosher bottom-line '>充值记录</view>
+  <block wx:for="{{ itemList }}" wx:key="">
+    <view class='vosherlist  bottom-line'>
+      <view class='voshers' wx:if="{{item.type == 1}}">微信充值</view>
+      <view class='voshers' wx:if="{{item.type == 2}}">提现转出</view>
+      <view class='voshers' wx:if="{{item.type == 3}}">微信支付</view>
+      <view class='voshers' wx:if="{{item.type == 4}}">余额支付</view> 
+      <view class='voshers' wx:if="{{item.type == 5}}">佣金转入</view>
+      <view class='voshers' wx:if="{{item.type == 6}}">后台充值</view>
+      <view class='voshers' wx:if="{{item.type == 7}}">补助转入</view>
+      <view class='vosher-time'>{{item.create_time }}</view>
+      <view class='vosher-number omit' style="color:{{ item.type == 1 || item.type == 5 || item.type == 6 || item.type == 7 ?'#f99265':'#ff5733' }}">{{ item.type == 1 || item.type == 5 || item.type == 6 || item.type == 7 ? '+':'-'}}{{item.price}}元</view>
+    </view>
+  </block>
+</view>
+
+<!-- 弹出 -->
+
+<view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+  <view class="dialog_mask" bindtap="onClickdiaView" />
+  <view class="dialog_container">
+
+    <!--  //此区域自定义视图  -->
+    <view class="flex_Center" style="height:400rpx;background:white;">
+      <view class='item-view'>
+        <text class='title'>充值金额</text>
+        <view class='price bottom-line'>
+          <text class='price-hint'>￥</text>
+          <input class='price-input' placeholder='100' placeholder-class='active' bindinput='getPrice' />
+          <image class='img' src='/pages/images/08.svg' />
+        </view>
+        <!-- 提现按钮 -->
+        <view class='but-view'>
+          <view class='submit' bindtap='onSubmit'>确认充值</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

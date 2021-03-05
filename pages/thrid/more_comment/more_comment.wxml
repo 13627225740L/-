@@ -1,0 +1,32 @@
+<block wx:for="{{ reviewsList }}" wx:key="{{}}">
+  <view class='comment bottom-line' wx:if="{{ index < 20 }}" style='margin: 10rpx 0; '>
+    <view class='user'>
+      <!-- 用户头像 -->
+      <image class='userAv' src='{{item.usertv}}' />
+      <!-- 用户名 -->
+      <text class='userName omit'>{{item.username}}</text>
+
+      <!-- 评论星级、实心 -->
+      <block wx:for="{{item.sume}}" wx:key="item">
+        <image class='comment-icon' src='img/star.png'></image>
+      </block>
+      <!-- 评论星级、空心 -->
+      <block wx:for="{{5 - item.sume}}" wx:key="item">
+        <image class='comment-icon' src='img/hui.png'></image>
+      </block>
+      <!-- 评论时间 -->
+
+      <text class='reviewsTime'>{{ item.create_time }}</text>
+    </view>
+
+    <!-- 评论内容 -->
+    <text class='info'>{{ item.info}}</text>
+
+    <!-- 评论图片 -->
+    <view>
+      <block wx:for="{{ item.ping_image }}" wx:key="">
+        <image class='imag' src='{{ item.image }}' />
+      </block>
+    </view>
+  </view>
+</block>

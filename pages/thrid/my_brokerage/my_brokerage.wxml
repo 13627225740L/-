@@ -1,0 +1,26 @@
+<!-- 顶部 -->
+<view class='up'>
+  <text>你获得的佣金（元）</text>
+  <view style='font-size: 60rpx;'>{{ balance }}</view>
+  <text>元</text>
+</view>
+
+<!-- 转入余额按钮 -->
+<view class='button-view all-center'>
+  <view class='butt all-center' bindtap='shiftToBalance'>转入余额</view>
+</view>
+
+<!-- 佣金记录 -->
+<view class='item-list'>
+  <text class='hint'>佣金记录</text>
+  <block wx:for="{{ itemList }}" wx:key="">
+    <view class='item bottom-line '>
+      <view class='item-name omit' wx:if="{{ item.stctic == 1 }}">邀请获得</view>
+      <view class='item-name omit' wx:if="{{ item.stctic == 2 }}">转入余额</view>
+      <view class='item-time'>{{ item.create_time }}</view>
+      <view class='item-price' style="color: {{ item.stctic == 1 ? '#469af8':'#ff5733' }}">{{ item.stctic == 1 ? '+':'-' }}{{ item.price }}元</view>
+    </view>
+  </block>
+</view>
+<!-- 提示 -->
+<text class='bot-hint all-center md-font grey-4'>获得的佣金仅可转入账户余额,账户余额绑定银行卡后可申请提现。点击转入余额，佣金将全额转入账户余额。</text>

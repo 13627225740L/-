@@ -1,0 +1,89 @@
+<!-- 订单详情 -->
+<block wx:for="{{goodsList}}" wx:key="">
+<view class='goosdetail shadow '>
+  <view class="details">
+    <view class='top'>
+      <image src="img/01.png"/>
+      <text class='title omit' >{{goodsList[0].shping_name}}</text>
+      <text class='adress omit'>{{ goodsList[0].address }}</text>
+    </view>
+    <view class="give{{ currentIndex == index ? active :'' }}" bind:tap="totake" >取</view>
+  </view>
+  <view class='detail'>
+    <image src="{{item.image}}"/>
+    <view class='Detail'>  
+      <view class='mealname '>
+      <text class="hints">餐名：</text><text class='mealname-text two-omit'>{{item.title}}</text>
+      </view>
+       <view class="number">
+       <text class="hintnumber"> 数量：</text> 
+        <view class='size-footer'>
+          <text  class='sum'>{{item.sum}}份</text>+
+          <text class="size two-omit" wx:if="{{ goodsList[0].goods_option }}">{{goodsList[0].goods_option[0].option_name}}</text>
+          <text class='size omit'  wx:if="{{ !goodsList[0].goods_option }}">默认规格</text>
+        </view>
+      </view>
+       <view class='mealname'>
+      <text class="hint">代购费：</text><text class='mealname-text omit' >￥{{item.price}}</text>
+      </view>
+    </view>
+  </view> 
+ </view>
+</block> 
+<!-- 收货人的详情 -->
+<view class='Consignee shadow'>
+  <view class=" container">
+    <view class='receiver'>
+      <image src="img/02.png"/>
+      <text class='seat omit'>{{ infoList.list.info }}</text>
+    </view>
+    <view class="give" hover-class='active'  bind:tap="toOrder" >送</view>
+  </view>
+  <!-- 收货人的头像、昵称、电话 -->
+  <view class='user'>
+    <image class='usertv' src='{{infoList.usertv}}'/>
+    <view class='users'>
+      <view class='usersname'>收货人：
+        <view class="name omit" wx:if="{{ type == 0 }}">{{ infoList.username }}</view>
+        <view class="name omit" wx:else>{{ infoList.username }}</view>
+      </view>
+      <view class='usersname'>
+        <view class='phone omit' wx:if="{{ type == 0 }}">{{ phone }}</view>
+        <view class='phone omit' wx:else>{{ infoList.list.phone }}</view>
+      </view>
+    </view>
+  <!-- 联系他 -->
+    <view class='contact' bindtap='tocalling'>
+      <image src='img/03.png'/>
+    </view>
+  </view>
+  <!-- 获取买家留言 -->
+  <view class='message'>
+    <view class='say'>买家说：</view>
+    <view class='leaving two-omit'>{{infoList.destse}}</view>
+  </view>
+</view>
+<!-- 商品价格详情 -->
+<view class='goods'>
+  <view class='tariff bottom-line'>
+  <text class='buy'>代购价格:</text>
+  <text class='statement'>买家付款冻结、垫资代购送达即可结算体现</text>
+  <text class='price omit'>￥{{goodsList[0].price}}</text>
+</view>
+<view class='tariff bottom-line'>
+  <text class='buy'>平台代购补助:</text>
+  <text class='statement'>花果园区域每单配送补助{{infoList.platform_price}}元</text>
+  <text class='Subsidy-price omit'>￥{{infoList.platform_price}}</text>
+</view>
+<view class='tariff bottom-line'>
+  <text class='buy'>买家赏金:</text>
+  <text class='statement'>买家自愿打赏金额</text>
+  <text class='reward-price omit' style=" !important;">￥{{infoList.d_price}}</text>
+</view>
+</view>
+<!-- 底部 -->
+<view class='bottom'>
+  <text class='g-price-text'>预计获得：</text>
+  <text class='g-price'>￥{{ total }}</text>
+  <view class='submit' data-index='0' bindtap='goPay'>确认完成</view>
+</view>

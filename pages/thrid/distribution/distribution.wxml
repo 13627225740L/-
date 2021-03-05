@@ -1,0 +1,27 @@
+<view class="orderlist bottom-line">
+  <text>订单列表</text>
+</view>
+<view class="list" wx:for='{{orderList}}' wx:key=''>
+  <view class="imgs bottom-line" data-id='{{ item.id }}' bind:tap="toDetils">
+    <image class="imag" src="{{item.usertv}} " />
+    <view class="self">
+      <view class="name omit">
+        {{item.username}}
+      </view>
+      <view class="seats ">
+        <image style="" src="/pages/logs/img/02.svg" />
+        <text class=" omit " style="">{{item.address}}</text>
+      </view>
+    </view>
+    <view class="money">
+      <text class="moneyTA">TA打赏</text>
+      <text class="yuan">¥</text>
+      <text class="moneyyuan omit">{{item.d_price}}</text>
+      <text class="yuans">元</text>
+    </view>
+    <view class='myself'>
+      <view class="mys" data-id="{{ item.id }}" wx:if="{{ item.stctic == 2 }}" catchtap="toDel">取消</view>
+      <view class="ok" wx:if="{{ item.stctic == 3 }}">已完成</view>
+    </view>
+  </view>
+</view>

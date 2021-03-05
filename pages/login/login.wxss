@@ -1,0 +1,25 @@
+page {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+button {
+  background-color: #2a82e4 !important;
+  width: 60%;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-top: 60rpx;
+}
+
+image {
+  margin-top: 60rpx;
+  width: 550rpx;
+  height: 670rpx;
+}
+
+.title {
+  font-size: 26rpx;
+  color: #000;
+  line-height: 298rpx;
+  font-weight: 600;
+}

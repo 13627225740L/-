@@ -1,0 +1,108 @@
+/* pages/thrid/invest/invest.wxss */
+
+page {
+  width: 750rpx;
+}
+
+.top {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.combo {
+  margin: 20rpx auto;
+  width: 720rpx;
+  height: 60rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.cont {
+  width: 560rpx;
+  padding: 30rpx 15rpx;
+}
+
+.info-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #808080;
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  padding: 10rpx 0;
+  margin: 10rpx;
+  width: 214rpx;
+}
+
+.active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #00baad;
+  border: 2rpx solid #00baad;
+  border-radius: 6rpx;
+  padding: 10rpx 0;
+  margin: 10rpx;
+  width: 214rpx;
+}
+
+.select {
+  width: 400rpx;
+  height: 90rpx;
+  background-color: #23aeff;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45rpx;
+}
+
+/* 微信支付 */
+
+.footer {
+  height: 200rpx;
+  background: white;
+}
+
+.bottom-untils {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.radio {
+  width: 750rpx;
+}
+
+.radio-group {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+}
+
+.onLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 630rpx;
+  padding-left: 10rpx;
+}
+
+.onLine-bot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 60rpx;
+}
+
+.safety-ico {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 14rpx;
+}
